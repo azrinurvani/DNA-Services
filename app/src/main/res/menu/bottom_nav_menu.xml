@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragmentHome"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/fragmentStnk"
+        android:icon="@drawable/ic_baseline_receipt_24"
+        android:title="@string/title_detail_biro_jasa" />
+
+    <item
+        android:id="@+id/fragmentEkspedisi"
+        android:icon="@drawable/ic_baseline_two_wheeler_24"
+        android:title="@string/title_ekspedisi" />
+
+    <item
+        android:id="@+id/fragmentHelp"
+        android:icon="@drawable/ic_baseline_help_24"
+        android:title="@string/title_help" />
+
+
+
+</menu>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DNA Project</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_detail_biro_jasa">STNK</string>
+    <string name="title_ekspedisi">Ekspedisi</string>
+    <string name="title_help">Bantuan</string>
+</resources>

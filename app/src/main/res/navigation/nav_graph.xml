@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.mobile.azrinurvani.dnaproject.view.home.FragmentHome"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/fragmentEkspedisi"
+        android:name="com.mobile.azrinurvani.dnaproject.view.ekspedisi.FragmentEkspedisi"
+        android:label="Ekspedisi"
+        tools:layout="@layout/fragment_ekspedisi" />
+    <fragment
+        android:id="@+id/fragmentStnk"
+        android:name="com.mobile.azrinurvani.dnaproject.view.stnk.FragmentStnk"
+        android:label="STNK"
+        tools:layout="@layout/fragment_stnk" />
+    <fragment
+        android:id="@+id/fragmentHelp"
+        android:name="com.mobile.azrinurvani.dnaproject.view.help.FragmentHelp"
+        android:label="Bantuan"
+        tools:layout="@layout/fragment_help" />
+</navigation>
