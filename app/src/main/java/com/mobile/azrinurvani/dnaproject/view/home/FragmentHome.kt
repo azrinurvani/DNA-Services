@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.findNavController
 import com.mobile.azrinurvani.dnaproject.BaseFragment
 import com.mobile.azrinurvani.dnaproject.R
 import com.mobile.azrinurvani.dnaproject.databinding.FragmentHomeBinding
@@ -37,5 +38,16 @@ class FragmentHome : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         homeViewModel = ViewModelProviders.of(this,providerFactory).get(HomeViewModel::class.java)
+
+        moveToFragmentStnkTahunan()
+
     }
+
+    private fun moveToFragmentStnkTahunan(){
+        binding.cardPajakTahunan.setOnClickListener {
+            val directions= FragmentHomeDirections.actionFragmentHomeToFormStnkTahunanFragment()
+            it.findNavController().navigate(directions)
+        }
+    }
+
 }

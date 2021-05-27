@@ -101,5 +101,7 @@ dependencies {
     //find debug
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
 
+    implementation 'com.karumi:dexter:4.2.0'
+
 
 }

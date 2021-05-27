@@ -14,5 +14,6 @@
     <color name="blue_light">#00c6f3</color>
     <color name="green_light">#00BE7E</color>
     <color name="yellow">#f0b000</color>
-    <color name="red">#f1004e</color>
+    <color name="pink">#f1004e</color>
+    <color name="red">#B30808</color>
 </resources>

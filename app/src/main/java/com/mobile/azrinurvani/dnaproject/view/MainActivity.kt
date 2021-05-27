@@ -23,9 +23,9 @@ class MainActivity : BaseActivity() {
         setContentView(binding.root)
 
         navController = findNavController(R.id.nav_host_fragment)
-//
-//        val appBarConfiguration = AppBarConfiguration(listFragment)
-//        setupActionBarWithNavController(navController,appBarConfiguration)
+
+        val appBarConfiguration = AppBarConfiguration(listFragment)
+        setupActionBarWithNavController(navController,appBarConfiguration)
         binding.navView.setupWithNavController(navController)
 
 

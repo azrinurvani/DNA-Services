@@ -9,20 +9,28 @@
         android:id="@+id/fragmentHome"
         android:name="com.mobile.azrinurvani.dnaproject.view.home.FragmentHome"
         android:label="Home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_formStnkTahunanFragment"
+            app:destination="@id/formStnkTahunanFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentEkspedisi"
-        android:name="com.mobile.azrinurvani.dnaproject.view.ekspedisi.FragmentEkspedisi"
+        android:name="com.mobile.azrinurvani.dnaproject.view.ekspedisi.FragmentDetailEkspedisi"
         android:label="Ekspedisi"
-        tools:layout="@layout/fragment_ekspedisi" />
+        tools:layout="@layout/fragment_detail_ekspedisi" />
     <fragment
         android:id="@+id/fragmentStnk"
-        android:name="com.mobile.azrinurvani.dnaproject.view.stnk.FragmentStnk"
+        android:name="com.mobile.azrinurvani.dnaproject.view.stnk.FragmentDetailStnk"
         android:label="STNK"
-        tools:layout="@layout/fragment_stnk" />
+        tools:layout="@layout/fragment_detail_stnk" />
     <fragment
         android:id="@+id/fragmentHelp"
         android:name="com.mobile.azrinurvani.dnaproject.view.help.FragmentHelp"
         android:label="Bantuan"
         tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/formStnkTahunanFragment"
+        android:name="com.mobile.azrinurvani.dnaproject.view.stnk.FormStnkTahunanFragment"
+        android:label="Form STNK Tahunan" />
 </navigation>

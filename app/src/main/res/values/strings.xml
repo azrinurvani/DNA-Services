@@ -6,4 +6,27 @@
     <string name="title_detail_biro_jasa">STNK</string>
     <string name="title_ekspedisi">Ekspedisi</string>
     <string name="title_help">Bantuan</string>
+    <string name="message_no_data">No Data</string>
+    <string name="stnk_tahunan">STNK Tahunan</string>
+    <string name="stnk_tahunan_desc">Layanan untuk perpanjang STNK tahunan</string>
+    <string name="stnk_5_tahunan">STNK 5 Tahunan</string>
+    <string name="stnk_5_tahunan_desc">Layanan untuk perpanjang STNK 5 Tahunan</string>
+    <string name="stnk_hilang">STNK Hilang</string>
+    <string name="stnk_hilang_desc">Layanan untuk penerbitan STNK Hilang</string>
+    <string name="mutasi">Mutasi</string>
+    <string name="mutasi_desc">Layanan untuk mutasi kendaraan bermotor</string>
+    <string name="balik_nama">Balik Nama</string>
+    <string name="layanan_untuk_balik_nama_kendaraan_bermotor">Layanan untuk balik nama kendaraan bermotor</string>
+    <string name="eskpedisi_desc">Layanan pengiriman motor beserta aksesoris dan spare part</string>
+    <string name="ekpedisi">Ekpedisi</string>
+    <string name="hint_input_name">Masukkan Nama Anda</string>
+    <string name="hint_input_no_ktp">Masukkan Nomor KTP/NIK Anda</string>
+    <string name="hint_input_phone_number">Masukkan Nomor Handphone Anda</string>
+    <string name="hint_input_address">Masukkan alamat anda</string>
+    <string name="centang_perlengkapan_attention">Centang sesuai perlengakapan dokumen yang anda miliki</string>
+    <string name="bpkb_asli">BPKB Asli</string>
+    <string name="ktp_asli">KTP Asli</string>
+    <string name="stnk_asli">STNK Asli</string>
+    <string name="submit">Submit</string>
+    <string name="take_pict_ktp">Ambil Foto KTP</string>
 </resources>

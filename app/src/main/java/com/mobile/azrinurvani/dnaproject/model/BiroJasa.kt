@@ -21,11 +21,17 @@ class BiroJasa(
     @ColumnInfo(name = "phone")
     var phone:String? = null,
 
+    @ColumnInfo(name = "address")
+    var address:String? = null,
+
     @ColumnInfo(name = "bpkb_avail")
     var bpkbAvail: Boolean? = false,
 
     @ColumnInfo(name = "stnk_avail")
     var stnkAvail: Boolean? = false,
+
+    @ColumnInfo(name = "cpv_avail")
+    var cpvAvail: Boolean? = false,
 
     @ColumnInfo(name = "ktp_avail")
     var ktpAvail: Boolean? = false,
