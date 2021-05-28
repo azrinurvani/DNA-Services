@@ -9,6 +9,16 @@
 5. RxJava2
 
 # DEV-LOG
+Ver.0.0.3
+- Improve BiroJasa DTO
+- Improve Form STNK Tahunan
+- Add method getDataBiroJasaList in StnkTahunanViewModel.kt
+- Create layout_list_stnk_detail.xml
+- Add Icon and Background design drawable
+- Add Recylcer Adapter STNK Detail
+- Improve STNK Detail Fragment
+- Add Module STNK
+
 Ver.0.0.2
 - Design UI Home 
 - Membuat Form STNK tahunan (menambahkan fragment_form_stnk_tahunan
