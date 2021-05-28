@@ -3,6 +3,7 @@ package com.mobile.azrinurvani.dnaproject.di
 import com.mobile.azrinurvani.dnaproject.view.ekspedisi.FragmentDetailEkspedisi
 import com.mobile.azrinurvani.dnaproject.view.help.FragmentHelp
 import com.mobile.azrinurvani.dnaproject.view.home.FragmentHome
+import com.mobile.azrinurvani.dnaproject.view.stnk.FormStnkLimaTahunanFragment
 import com.mobile.azrinurvani.dnaproject.view.stnk.FormStnkTahunanFragment
 import com.mobile.azrinurvani.dnaproject.view.stnk.FragmentDetailStnk
 import dagger.Module
@@ -24,5 +25,8 @@ abstract class FragmentBuildersModule {
     abstract fun contributeFragmentHelp() : FragmentHelp
 
     @ContributesAndroidInjector
-    abstract fun contributeFragmentFormStnkTahukan() : FormStnkTahunanFragment
+    abstract fun contributeFragmentFormStnkTahunan() : FormStnkTahunanFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributeFragmentFormStnk5Tahunan() : FormStnkLimaTahunanFragment
 }

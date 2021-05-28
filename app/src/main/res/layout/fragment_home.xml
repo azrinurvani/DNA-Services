@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:padding="10dp"
-    android:background="@color/white">
+    android:background="@color/grey_light">
 <LinearLayout
     android:layout_marginTop="32dp"
     android:layout_width="match_parent"
@@ -36,7 +36,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/circle_shape_red_bg"
-                    android:src="@drawable/ic_launcher_foreground"
+                    android:src="@drawable/ic_baseline_receipt_white"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -75,7 +75,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/circle_shape_yellow_bg"
-                    android:src="@drawable/ic_launcher_foreground"
+                    android:src="@drawable/ic_baseline_receipt_white"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -256,7 +256,7 @@
                     android:layout_height="64dp"
                     android:background="@drawable/circle_shape_pink_bg"
                     android:padding="10dp"
-                    android:src="@drawable/ic_launcher_foreground" />
+                    android:src="@drawable/ic_baseline_two_wheeler_white" />
 
                 <TextView
                     android:layout_width="wrap_content"

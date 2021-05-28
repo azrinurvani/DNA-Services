@@ -40,12 +40,20 @@ class FragmentHome : BaseFragment() {
         homeViewModel = ViewModelProviders.of(this,providerFactory).get(HomeViewModel::class.java)
 
         moveToFragmentStnkTahunan()
+        moveToFragmentStnk5Tahunan()
 
     }
 
     private fun moveToFragmentStnkTahunan(){
         binding.cardPajakTahunan.setOnClickListener {
             val directions= FragmentHomeDirections.actionFragmentHomeToFormStnkTahunanFragment()
+            it.findNavController().navigate(directions)
+        }
+    }
+
+    private fun moveToFragmentStnk5Tahunan(){
+        binding.cardPajak5Tahunan.setOnClickListener {
+            val directions= FragmentHomeDirections.actionFragmentHomeToFormStnkLimaTahunanFragment()
             it.findNavController().navigate(directions)
         }
     }

@@ -26,4 +26,9 @@
         <item name="android:fontFamily">@font/open_sans_bold</item>
         <item name="android:textSize">18sp</item>
     </style>
+
+    <style name="Theme.AppTheme.Dialog.Alert" parent="Theme.AppCompat.Light.Dialog.Alert" >
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorAccent">@color/red</item>
+    </style>
 </resources>

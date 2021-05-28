@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_below="@+id/imgFingerPrint"
+    android:layout_margin="@dimen/margin_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_padding"
+        android:textColor="@color/black"
+        android:text="Data has been successfully saved"
+        android:lines="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit_success"
+        android:text="OK"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@drawable/bg_button_green"
+        android:textColor="@color/white"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+
+</LinearLayout>

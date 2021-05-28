@@ -12,11 +12,17 @@ class BiroJasa(
     @ColumnInfo(name = "id")
     var id :Int? = null,
 
+    @ColumnInfo(name = "jenis_doc")
+    var jenisDoc:Int? = null, //1 = STNK Tahunan, 2=STNK 5 Tahunan, 3= STNK Hilang, 4 = Mutasi, 5 = Balik Nama
+
     @ColumnInfo(name = "name")
     var name:String? = null,
 
     @ColumnInfo(name = "no_ktp")
     var noKtp:String? = null,
+
+    @ColumnInfo(name = "no_polisi")
+    var noPolisi:String? = null,
 
     @ColumnInfo(name = "phone")
     var phone:String? = null,
