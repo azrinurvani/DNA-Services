@@ -9,6 +9,18 @@
 5. RxJava2
 
 # DEV-LOG
+Ver.0.0.4
+- Menambahkan halaman Aproval apabila salah satu list stnk di klik
+- Rename StnkTahunanViewModel menjadi StnkViewModel
+- Persiapan method update data pengajuan STNK pada BiroJasaDao
+- Improve BiroJasa DTO menggunakan parcelable
+- Improve StnkDetailRecycler (menambahkan action klik untuk redirect ke halaman aproval)
+- Update Navigation Graph
+- Action Submit pada Form STNK 5 Tahunan
+- Penambahan validasi ketika submit form pada STNK Tahunan dan STNK 5 Tahunan
+- Penambahan direktori anim untuk persiapan animasi ketika berpindah halaman
+
+
 Ver.0.0.3
 - Improve BiroJasa DTO
 - Improve Form STNK Tahunan
