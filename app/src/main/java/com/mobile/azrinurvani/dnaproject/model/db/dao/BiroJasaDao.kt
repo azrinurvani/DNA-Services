@@ -1,13 +1,10 @@
 package com.mobile.azrinurvani.dnaproject.model.db.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.mobile.azrinurvani.dnaproject.model.BiroJasa
-import com.mobile.azrinurvani.dnaproject.model.User
 import io.reactivex.Completable
 import io.reactivex.Single
+
 
 @Dao
 interface BiroJasaDao {
@@ -20,6 +17,25 @@ interface BiroJasaDao {
 
     @Query("SELECT * FROM ${BiroJasa.TABLE_NAME} WHERE id=:id")
     fun getBiroJasaById(id:Int): Single<BiroJasa>
+
+    //update status aproval
+    //menggunakan query
+
+
+
+
+    //contoh update
+    @Update
+    fun updateBiroJasa(data: BiroJasa?): Completable
+
+
+    //contoh penggunaan
+//    fun updateStatus(id: Int, status: Int) {
+//        val tour: BiroJasa = getBiroJasaById(id)
+//        tour.end_address = end_address
+//        updateTour(tour)
+//    }
+
 
 
 }

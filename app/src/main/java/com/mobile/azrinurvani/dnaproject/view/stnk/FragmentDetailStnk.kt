@@ -1,7 +1,6 @@
 package com.mobile.azrinurvani.dnaproject.view.stnk
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,11 +10,9 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mobile.azrinurvani.dnaproject.BaseFragment
-import com.mobile.azrinurvani.dnaproject.R
 import com.mobile.azrinurvani.dnaproject.databinding.FragmentDetailStnkBinding
 import com.mobile.azrinurvani.dnaproject.model.BiroJasa
 import com.mobile.azrinurvani.dnaproject.viewmodel.ViewModelProviderFactory
-import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
 
@@ -23,7 +20,7 @@ class FragmentDetailStnk : BaseFragment() {
 
     private lateinit var binding : FragmentDetailStnkBinding
 
-    private lateinit var viewModel: StnkTahunanViewModel
+    private lateinit var viewModel: StnkViewModel
 
     @Inject
     lateinit var vmFactory : ViewModelProviderFactory
@@ -44,7 +41,7 @@ class FragmentDetailStnk : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProviders.of(this,vmFactory).get(StnkTahunanViewModel::class.java)
+        viewModel = ViewModelProviders.of(this,vmFactory).get(StnkViewModel::class.java)
 
         retrieveData()
         setRecyclerView()

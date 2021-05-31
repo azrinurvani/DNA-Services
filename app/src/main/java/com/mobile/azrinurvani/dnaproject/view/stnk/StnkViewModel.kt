@@ -12,7 +12,8 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
-class StnkTahunanViewModel @Inject constructor(
+//ganti menjadi STNKViewModel
+class StnkViewModel @Inject constructor(
     private val context : Application,
     private val database: DnaDatabase
 ) : AndroidViewModel(context){
@@ -24,11 +25,29 @@ class StnkTahunanViewModel @Inject constructor(
     @Inject
     lateinit var stnkDetailRecyclerAdapter: StnkDetailRecyclerAdapter
 
+
     init {
         Log.d(TAG, "STNKTahunanViewModel is working...." )
     }
 
-    fun saveDataIntoDb(data: BiroJasa){
+    fun saveDataIntoDb(
+        jenisDoc : Int,name:String,noKtp:String,phone : String, address:String,noPolisi:String,
+        ktpAvail:Boolean,bpkbAvail:Boolean,stnkAvail:Boolean,cpvAvail:Boolean,ktpImagePath:String,status:Int){
+
+        val data = BiroJasa(
+            jenisDoc = jenisDoc,
+            name = name,
+            noKtp = noKtp,
+            phone = phone,
+            address = address,
+            noPolisi = noPolisi,
+            bpkbAvail = bpkbAvail,
+            stnkAvail = stnkAvail,
+            ktpAvail = ktpAvail,
+            cpvAvail = cpvAvail,
+            ktpImagePath = "-",
+            status = status)
+
 
         database?.biroJasaDao()?.insertBiroJasa(data)
             ?.subscribeOn(Schedulers.io())
@@ -39,6 +58,7 @@ class StnkTahunanViewModel @Inject constructor(
 
                 },{
                     Log.e(TAG, "saveDataIntoDb: errror ${it.localizedMessage}" )
+                    errorMsg = it.localizedMessage.toString()
                 }
             )?.let {
                 compositeDisposable.add(it)
@@ -57,17 +77,39 @@ class StnkTahunanViewModel @Inject constructor(
                         biroJasaList.postValue(listOf())
                     }
                     it?.forEach{biroJasa->
-                        biroJasa.name?.let { it1 -> Log.v("Person Name ", it1) }
+                        biroJasa.name?.let { it1 -> Log.v("Name ", it1) }
                     }
 
                 },{
-                    Log.e(TAG, "getPersonData: RxError: ${it.localizedMessage}" )
+                    Log.e(TAG, "getBiroJasaData: RxError: ${it.localizedMessage}" )
+                    errorMsg = it.localizedMessage.toString()
 
                 })?.let {
                     compositeDisposable.add(it)
                 }
     }
 
+    fun getBiroJasaById(id:Int){
+        database?.biroJasaDao().getBiroJasaById(id)
+            ?.subscribeOn(Schedulers.io())
+            ?.observeOn(AndroidSchedulers.mainThread())
+            ?.subscribe({
+                if (it!=null){
+
+                }
+            },{
+                Log.e(TAG, "getPersonData: RxError: ${it.localizedMessage}" )
+                errorMsg = it.localizedMessage.toString()
+
+            })?.let {
+                compositeDisposable.add(it)
+            }
+    }
+
+
+    fun updateStatus(){
+
+    }
 
 
     //Adapter
@@ -81,5 +123,6 @@ class StnkTahunanViewModel @Inject constructor(
 
     companion object {
         private const val TAG = "StnkTahunanViewModel"
+        var errorMsg = ""
     }
 }

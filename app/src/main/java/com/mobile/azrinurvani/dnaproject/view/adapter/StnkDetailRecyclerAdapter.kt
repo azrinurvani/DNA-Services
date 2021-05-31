@@ -2,9 +2,11 @@ package com.mobile.azrinurvani.dnaproject.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.mobile.azrinurvani.dnaproject.databinding.LayoutListStnkDetailBinding
 import com.mobile.azrinurvani.dnaproject.model.BiroJasa
+import com.mobile.azrinurvani.dnaproject.view.stnk.FragmentDetailStnkDirections
 
 class StnkDetailRecyclerAdapter : RecyclerView.Adapter<StnkDetailRecyclerAdapter.StnkDetailViewHolder>() {
     private lateinit var bindingLayout : LayoutListStnkDetailBinding
@@ -26,6 +28,14 @@ class StnkDetailRecyclerAdapter : RecyclerView.Adapter<StnkDetailRecyclerAdapter
 
     override fun onBindViewHolder(holder: StnkDetailViewHolder, position: Int) {
         holder.bind(listBiroJasa[position])
+
+        holder.itemView.setOnClickListener {view->
+            //navigate to AprovalStnkFragment
+            listBiroJasa[position].let {data->
+                val directions = FragmentDetailStnkDirections.actionFragmentStnkToAprovalStnkFragment(data)
+                view.findNavController().navigate(directions)
+            }
+        }
     }
 
     fun setStnkRecyclerAdapter(data : ArrayList<BiroJasa>){
@@ -56,17 +66,17 @@ class StnkDetailRecyclerAdapter : RecyclerView.Adapter<StnkDetailRecyclerAdapter
                 binding.txtJenisDoc.text = "Balik Nama Kendaraan"
             }
 
-            if (data?.status==1){
+            if (data?.status==0){
+                binding.txtStatus.text = "Pengajuan ditolak"
+            }else if (data?.status==1){
                 binding.txtStatus.text = "Sedang diproses"
             }else if(data?.status==2){
                 binding.txtStatus.text = "Pengajuan diterima"
             }else if (data?.status==3){
                 binding.txtStatus.text = "Dokumen akan dijemput"
             }else if (data?.status==4){
-                binding.txtStatus.text = "Pengurusan pajak telah selesai"
-            }else if (data?.status==5){
                 binding.txtStatus.text = "Menunggu pembayaran"
-            }else if (data?.status==6){
+            }else if (data?.status==5){
                 binding.txtStatus.text = "Transaksi berhasil"
             }
 

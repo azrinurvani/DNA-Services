@@ -16,7 +16,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.FileProvider
 import androidx.lifecycle.ViewModelProviders
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import com.bumptech.glide.Glide
 import com.karumi.dexter.Dexter
@@ -29,8 +28,6 @@ import com.mobile.azrinurvani.dnaproject.BuildConfig
 import com.mobile.azrinurvani.dnaproject.databinding.FragmentFormStnkTahunanBinding
 import com.mobile.azrinurvani.dnaproject.helper.FileCompressor
 import com.mobile.azrinurvani.dnaproject.helper.FunctionGlobalDir
-import com.mobile.azrinurvani.dnaproject.model.BiroJasa
-import com.mobile.azrinurvani.dnaproject.view.home.FragmentHomeDirections
 import com.mobile.azrinurvani.dnaproject.viewmodel.ViewModelProviderFactory
 import java.io.File
 import java.io.IOException
@@ -43,7 +40,7 @@ class FormStnkTahunanFragment : BaseFragment() {
 
 
     private lateinit var binding: FragmentFormStnkTahunanBinding
-    private lateinit var viewModel: StnkTahunanViewModel
+    private lateinit var viewModel: StnkViewModel
 
     @Inject
     lateinit var vmFactory : ViewModelProviderFactory
@@ -73,13 +70,18 @@ class FormStnkTahunanFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProviders.of(this,vmFactory).get(StnkTahunanViewModel::class.java)
+        viewModel = ViewModelProviders.of(this,vmFactory).get(StnkViewModel::class.java)
 
 
         moveToCamera()
         binding.btnSubmit.setOnClickListener {
             saveData()
         }
+    }
+
+    private fun validateForm(){
+
+
     }
 
     private fun saveData(){
@@ -91,24 +93,18 @@ class FormStnkTahunanFragment : BaseFragment() {
         var phone = binding.edtPhone.text.toString()
         var noPolisi = binding.edtNoPolisi.text.toString()
 
-
-        //pindahkan ke ViewModel
-        val data = BiroJasa(
-                jenisDoc = 1,
-                name = name,
-                noKtp = no_ktp,
-                phone = phone,
-                address = address,
-                noPolisi = noPolisi,
-                bpkbAvail = bpkbAvail,
-                stnkAvail = stnkAvail,
-                ktpAvail = ktpAvail,
-                cpvAvail = false,
-                ktpImagePath = "-",
-                status = 1)
-        viewModel.saveDataIntoDb(data)
-        Toast.makeText(activity,"Submit successful",Toast.LENGTH_LONG).show()
-        moveToHome()
+        if (name.isEmpty() ||
+            no_ktp.isEmpty()||
+            noPolisi.isEmpty()||
+            phone.isEmpty()||
+            address.isEmpty()
+        ){
+            Toast.makeText(activity,"Mohon lengkapi FORM !",Toast.LENGTH_LONG).show()
+        }else{
+            viewModel.saveDataIntoDb(1,name,no_ktp,phone,address,noPolisi,ktpAvail,bpkbAvail,stnkAvail,false,"-",1)
+            Toast.makeText(activity,"Submit successful",Toast.LENGTH_LONG).show()
+            moveToHome()
+        }
     }
 
     private fun moveToHome(){

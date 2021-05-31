@@ -1,10 +1,13 @@
 package com.mobile.azrinurvani.dnaproject.model
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
 //Entity untuk transaksi
+@Parcelize
 @Entity(tableName = BiroJasa.TABLE_NAME)
 class BiroJasa(
 
@@ -46,9 +49,9 @@ class BiroJasa(
     var ktpImagePath:String? = null,
 
     @ColumnInfo(name = "status")
-    var status : Int? = null
+    var status : Int? = null // 0 = Form rejected, 1 = Sedang di proses, 2 = Form disetujui, 3 = Dokumen segera dijemput, 4 = Menunggu pembayaran, 5 = Done
 
-) {
+) : Parcelable {
     companion object{
         const val TABLE_NAME="t_biro_jasa"
     }

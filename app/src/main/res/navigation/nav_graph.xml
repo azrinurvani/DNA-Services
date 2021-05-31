@@ -25,8 +25,12 @@
     <fragment
         android:id="@+id/fragmentStnk"
         android:name="com.mobile.azrinurvani.dnaproject.view.stnk.FragmentDetailStnk"
-        android:label="STNK"
-        tools:layout="@layout/fragment_detail_stnk" />
+        android:label="List Pengajuan STNK"
+        tools:layout="@layout/fragment_detail_stnk" >
+        <action
+            android:id="@+id/action_fragmentStnk_to_aprovalStnkFragment"
+            app:destination="@id/aprovalStnkFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentHelp"
         android:name="com.mobile.azrinurvani.dnaproject.view.help.FragmentHelp"
@@ -48,6 +52,21 @@
         tools:layout="@layout/fragment_form_stnk_lima_tahunan">
         <action
             android:id="@+id/action_formStnkLimaTahunanFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/aprovalStnkFragment"
+        android:name="com.mobile.azrinurvani.dnaproject.view.stnk.AprovalStnkFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_aproval_stnk" >
+
+        <argument
+            android:name="data_detal_stnk"
+            app:argType="com.mobile.azrinurvani.dnaproject.model.BiroJasa"
+            />
+
+        <action
+            android:id="@+id/action_aprovalStnkFragment_to_fragmentHome"
             app:destination="@id/fragmentHome" />
     </fragment>
 </navigation>
