@@ -29,7 +29,10 @@
     <string name="stnk_asli">STNK Asli</string>
     <string name="submit">Submit</string>
     <string name="take_pict_ktp">Ambil Foto KTP</string>
-    <string name="cek_fisik_kendaraan">Cek Fisik Kendaraan</string>
+    <string name="cek_fisik_kendaraan">Cek Fisik</string>
     <string name="hint_input_no_polisi">Nomor polisi (ex: B 1234 TXA)</string>
     <string name="label_loading">Sedang memuat data</string>
+    <string name="galeri">Galeri</string>
+    <string name="upload_ktp_dari_galeri">Upload KTP dari Galeri</string>
+    <string name="camera">Kamera</string>
 </resources>

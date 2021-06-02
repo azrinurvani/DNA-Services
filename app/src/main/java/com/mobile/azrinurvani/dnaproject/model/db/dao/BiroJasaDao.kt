@@ -21,10 +21,11 @@ interface BiroJasaDao {
     //update status aproval
     //menggunakan query
 
+    @Query("UPDATE t_biro_jasa SET status=:status WHERE id = :id")
+    fun updateStatusAproval(status: Int, id: Int) : Completable
 
 
-
-    //contoh update
+    //update menggunakan object
     @Update
     fun updateBiroJasa(data: BiroJasa?): Completable
 

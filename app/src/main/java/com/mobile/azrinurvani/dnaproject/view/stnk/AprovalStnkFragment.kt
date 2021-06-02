@@ -1,14 +1,21 @@
 package com.mobile.azrinurvani.dnaproject.view.stnk
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.mobile.azrinurvani.dnaproject.BaseFragment
 import com.mobile.azrinurvani.dnaproject.R
 import com.mobile.azrinurvani.dnaproject.databinding.FragmentAprovalStnkBinding
+import com.mobile.azrinurvani.dnaproject.viewmodel.ViewModelProviderFactory
+import javax.inject.Inject
 
 
 class AprovalStnkFragment : BaseFragment() {
@@ -17,6 +24,10 @@ class AprovalStnkFragment : BaseFragment() {
 
     private val dataDetailStnk : AprovalStnkFragmentArgs by navArgs()
 
+    @Inject
+    lateinit var vmFactory : ViewModelProviderFactory
+
+    private lateinit var viewModel: StnkViewModel
 
     var jenisDoc = "-"
     var bpkbAvail = "-"
@@ -24,6 +35,9 @@ class AprovalStnkFragment : BaseFragment() {
     var stnkAvail = "-"
     var cpvAvail = "-"
     var status = "-"
+    var receipt = "-"
+
+    var id_stnk = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +51,15 @@ class AprovalStnkFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel = ViewModelProviders.of(this,vmFactory).get(StnkViewModel::class.java)
+        id_stnk = dataDetailStnk.dataDetalStnk.id?.toInt() ?: 0
+
+
         setDataDetail()
+        approveStnk()
+        rejectStnk()
+        moveToCallByPhone()
     }
 
 
@@ -87,6 +109,12 @@ class AprovalStnkFragment : BaseFragment() {
                 cpvAvail = "Tidak Ada"
             }
 
+            if (data.receiptAvail==true){
+                 receipt= "Ada"
+            }else{
+                receipt = "Tidak Ada"
+            }
+
             if (data?.status==0){
               status = "Pengajuan ditolak"
             }else if (data?.status==1){
@@ -110,19 +138,45 @@ class AprovalStnkFragment : BaseFragment() {
             binding.txtKtpAsliAvail.setText(": $ktpAvail")
             binding.txtStnkAsliAvail.setText(": $stnkAvail")
             binding.txtBpkbAsliAvail.setText(": $bpkbAvail")
+            binding.txtReceiptAvail.setText(": $receipt")
             binding.txtDocCekFisik.setText(": $cpvAvail")
 
         }
     }
 
-    private fun aproveStnk(){
+    private fun approveStnk(){
         binding.btnApprove.setOnClickListener {
-
+            viewModel.updateStatus(2,id_stnk)
+            Toast.makeText(activity,"Approve Success",Toast.LENGTH_LONG).show()
+            moveToHome()
         }
     }
 
-    companion object {
+    private fun rejectStnk(){
+        binding.btnReject.setOnClickListener {
+            viewModel.updateStatus(0,id_stnk)
+            Toast.makeText(activity,"Reject Success",Toast.LENGTH_LONG).show()
+            moveToHome()
+        }
+    }
 
+    private fun moveToCallByPhone(){
+
+        binding.txtPhone.setOnClickListener {
+            val phoneNumber = binding.txtPhone.text.toString().split(":")[1]
+            val intent = Intent(Intent.ACTION_DIAL)
+            intent.data = Uri.parse("tel:$phoneNumber")
+            startActivity(intent)
+        }
+
+    }
+
+    private fun moveToHome(){
+        val directions = AprovalStnkFragmentDirections.actionAprovalStnkFragmentToFragmentHome()
+        view?.findNavController()?.navigate(directions)
+    }
+
+    companion object {
         private const val TAG = "AprovalStnkFragment"
     }
 }

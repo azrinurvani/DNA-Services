@@ -54,10 +54,13 @@ class FormStnkTahunanFragment : BaseFragment() {
     private var ktpAvail = false
     private var stnkAvail = false
     private var bpkbAvail = false
+    lateinit var ktpImagePath : String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        mCompressor = activity?.let { FileCompressor(it) }
+        mCompressor?.setDestinationDirectoryPath(FunctionGlobalDir.getStorageCard + FunctionGlobalDir.appFolder)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -74,14 +77,10 @@ class FormStnkTahunanFragment : BaseFragment() {
 
 
         moveToCamera()
+        moveToGalerry()
         binding.btnSubmit.setOnClickListener {
             saveData()
         }
-    }
-
-    private fun validateForm(){
-
-
     }
 
     private fun saveData(){
@@ -101,7 +100,7 @@ class FormStnkTahunanFragment : BaseFragment() {
         ){
             Toast.makeText(activity,"Mohon lengkapi FORM !",Toast.LENGTH_LONG).show()
         }else{
-            viewModel.saveDataIntoDb(1,name,no_ktp,phone,address,noPolisi,ktpAvail,bpkbAvail,stnkAvail,false,"-",1)
+            viewModel.saveDataIntoDb(1,name,no_ktp,phone,address,noPolisi,ktpAvail,bpkbAvail,stnkAvail,false,ktpImagePath,1)
             Toast.makeText(activity,"Submit successful",Toast.LENGTH_LONG).show()
             moveToHome()
         }
@@ -129,7 +128,7 @@ class FormStnkTahunanFragment : BaseFragment() {
 
 
     private fun moveToCamera(){
-        binding.btnTakeKtpPict.setOnClickListener {
+        binding.btnTakeKtpFromCamera.setOnClickListener {
 
         requestStoragePermission(true)
 
@@ -137,6 +136,12 @@ class FormStnkTahunanFragment : BaseFragment() {
 //            if (activity?.packageManager?.let { it1 -> intent.resolveActivity(it1) } != null) {
 //                startActivityForResult(intent, CAMERA_INTENT)
 //            }
+        }
+    }
+
+    private fun moveToGalerry(){
+        binding.btnTakeKtpFromGalerry.setOnClickListener {
+            requestStoragePermission(false)
         }
     }
 
@@ -162,7 +167,7 @@ class FormStnkTahunanFragment : BaseFragment() {
                         if (isCamera) {
                             dispatchTakePictureIntent()
                         } else {
-                           // dispatchGalleryIntent()
+                            dispatchGalleryIntent()
                         }
                     }
                 }
@@ -200,6 +205,13 @@ class FormStnkTahunanFragment : BaseFragment() {
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO)
             }
         }
+    }
+
+    private fun dispatchGalleryIntent() {
+        val pickPhoto = Intent(Intent.ACTION_PICK,
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        pickPhoto.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        startActivityForResult(pickPhoto, REQUEST_GALLERY_PHOTO)
     }
 
     @Throws(IOException::class)
@@ -248,8 +260,18 @@ class FormStnkTahunanFragment : BaseFragment() {
                     e.printStackTrace()
                 }
                 activity?.let { Glide.with(it).load(mPhotoFile).into(binding.imgTakePictKtp) }
+                ktpImagePath = mPhotoFile.toString()
                 Log.d(TAG, "onActivityResult: $mPhotoFile")
                 Toast.makeText(activity, "Image Path : $mPhotoFile", Toast.LENGTH_SHORT).show()
+            }
+            else if (requestCode == REQUEST_GALLERY_PHOTO) {
+                val selectedImage = data?.data
+                try {
+                    mPhotoFile = mCompressor?.compressToFile(File(getRealPathFromUri(selectedImage)))
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                }
+                activity?.let { Glide.with(it).load(mPhotoFile).into(binding.imgTakePictKtp) }
             }
         }
 
@@ -258,5 +280,6 @@ class FormStnkTahunanFragment : BaseFragment() {
     companion object {
         private const val TAG = "FormStnkTahunanFragment"
         private const val REQUEST_TAKE_PHOTO = 101
+        private const val REQUEST_GALLERY_PHOTO = 102
     }
 }

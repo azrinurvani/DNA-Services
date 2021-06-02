@@ -45,7 +45,7 @@ class StnkViewModel @Inject constructor(
             stnkAvail = stnkAvail,
             ktpAvail = ktpAvail,
             cpvAvail = cpvAvail,
-            ktpImagePath = "-",
+            ktpImagePath = ktpImagePath,
             status = status)
 
 
@@ -107,8 +107,17 @@ class StnkViewModel @Inject constructor(
     }
 
 
-    fun updateStatus(){
-
+    fun updateStatus(status : Int,id : Int){
+        database.biroJasaDao().updateStatusAproval(status,id)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    Log.d(TAG, "updateStatus onSubscribe Success")
+                },{
+                    Log.e(TAG, "updateStatus: onSubscribe Error : msg: ${it.localizedMessage}")
+                })?.let {
+                    compositeDisposable.add(it)
+                }
     }
 
 

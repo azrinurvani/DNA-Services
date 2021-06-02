@@ -62,6 +62,8 @@ class FormStnkLimaTahunanFragment : BaseFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        mCompressor = activity?.let { FileCompressor(it) }
+        mCompressor?.setDestinationDirectoryPath(FunctionGlobalDir.getStorageCard + FunctionGlobalDir.appFolder)
 
     }
 
@@ -131,7 +133,7 @@ class FormStnkLimaTahunanFragment : BaseFragment() {
     }
 
     private fun moveToCamera(){
-        binding.btnTakeKtpPict.setOnClickListener {
+        binding.btnTakeKtpFromCamera.setOnClickListener {
 
             requestStoragePermission(true)
 
@@ -139,6 +141,12 @@ class FormStnkLimaTahunanFragment : BaseFragment() {
 //            if (activity?.packageManager?.let { it1 -> intent.resolveActivity(it1) } != null) {
 //                startActivityForResult(intent, CAMERA_INTENT)
 //            }
+        }
+    }
+
+    private fun moveToGallery(){
+        binding.btnTakeKtpFromGalerry.setOnClickListener {
+            //action move to gallery
         }
     }
 

@@ -30,7 +30,7 @@ class FragmentHome : BaseFragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater,container,false)
-        Toast.makeText(activity,"Home Fragment", Toast.LENGTH_SHORT).show()
+
         val view = binding.root
         return view
     }
