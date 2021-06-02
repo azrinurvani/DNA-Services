@@ -9,6 +9,25 @@
 5. RxJava2
 
 # DEV-LOG
+Ver.0.0.5 - part 2
+- Update model BiroJasa.kt
+- Update design list pengajuan pada FragmentDetailStnk.kt
+- Delete decoration item list pengajuan STNK
+- Add drawable icon
+
+Ver.0.0.5
+- Action approval pada halaman Aproval (Approve/Reject)
+  --> update pada bagian BiroJasaDao.kt, StnkViewModel.kt, dan pada ApprovalStnkFragent
+- Update field pada tabel t_biro_jasa (penambahan field receipt_avail)
+- Penambahan action ketika nomor handphone di klik pada halaman Aproval
+- Penambahan icon pada Home (setiap menu)
+- Update design xml pada Form Pengajuan STNK Tahunan dan STNK 5 Tahunan
+- Update design xml pada fragment_aproval_stnk.xml
+- Fix Submit path Image ketika take dari Camera (STNK Tahunan dan STNK 5 Tahunan)
+- Fix action back button pada setiap halaman
+
+Note : "Take image from gallery masih belum jalan"
+
 Ver.0.0.4
 - Menambahkan halaman Aproval apabila salah satu list stnk di klik
 - Rename StnkTahunanViewModel menjadi StnkViewModel
