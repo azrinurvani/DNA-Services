@@ -66,8 +66,8 @@ class FragmentDetailStnk : BaseFragment() {
             setHasFixedSize(true)
             adapter = viewModel.getRecyclerAdapter()
             layoutManager = LinearLayoutManager(activity)
-            val decoration = DividerItemDecoration(activity, DividerItemDecoration.VERTICAL)
-            addItemDecoration(decoration)
+//            val decoration = DividerItemDecoration(activity, DividerItemDecoration.VERTICAL)
+//            addItemDecoration(decoration)
         }
     }
 

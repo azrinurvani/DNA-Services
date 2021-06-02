@@ -45,6 +45,9 @@ class BiroJasa(
     @ColumnInfo(name = "ktp_avail")
     var ktpAvail: Boolean? = false,
 
+    @ColumnInfo(name = "receipt_avail")
+    var receiptAvail: Boolean? = false,
+
     @ColumnInfo(name = "ktp_image_path")
     var ktpImagePath:String? = null,
 
