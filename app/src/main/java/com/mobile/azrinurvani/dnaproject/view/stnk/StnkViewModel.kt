@@ -12,7 +12,6 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
-//ganti menjadi STNKViewModel
 class StnkViewModel @Inject constructor(
     private val context : Application,
     private val database: DnaDatabase
@@ -32,7 +31,8 @@ class StnkViewModel @Inject constructor(
 
     fun saveDataIntoDb(
         jenisDoc : Int,name:String,noKtp:String,phone : String, address:String,noPolisi:String,
-        ktpAvail:Boolean,bpkbAvail:Boolean,stnkAvail:Boolean,cpvAvail:Boolean,ktpImagePath:String,status:Int){
+        ktpAvail:Boolean,bpkbAvail:Boolean,stnkAvail:Boolean,cpvAvail:Boolean,receiptAvail : Boolean,
+        ktpImagePath:String,status:Int){
 
         val data = BiroJasa(
             jenisDoc = jenisDoc,
@@ -45,6 +45,7 @@ class StnkViewModel @Inject constructor(
             stnkAvail = stnkAvail,
             ktpAvail = ktpAvail,
             cpvAvail = cpvAvail,
+            receiptAvail = receiptAvail,
             ktpImagePath = ktpImagePath,
             status = status)
 

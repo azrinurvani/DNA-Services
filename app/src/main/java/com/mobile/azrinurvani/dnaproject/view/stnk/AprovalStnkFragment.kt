@@ -78,11 +78,11 @@ class AprovalStnkFragment : BaseFragment() {
             }else if (data.jenisDoc==2){
                  jenisDoc = "STNK 5 Tahunan"
             }else if (data.jenisDoc==3){
-                 jenisDoc = "Penerbitan baru STNK hilang"
+                 jenisDoc = "Penerbitan Baru STNK Hilang"
             }else if (data.jenisDoc==4){
                 jenisDoc = "Mutasi"
             }else if (data.jenisDoc==5){
-                jenisDoc = "Balik nama"
+                jenisDoc = "Balik Nama"
             }
 
             if (data.bpkbAvail==true){

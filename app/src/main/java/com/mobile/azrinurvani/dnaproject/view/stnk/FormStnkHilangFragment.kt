@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
 import android.util.Log
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,6 +26,8 @@ import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.mobile.azrinurvani.dnaproject.BaseFragment
 import com.mobile.azrinurvani.dnaproject.BuildConfig
+import com.mobile.azrinurvani.dnaproject.R
+import com.mobile.azrinurvani.dnaproject.databinding.FragmentFormStnkHilangBinding
 import com.mobile.azrinurvani.dnaproject.databinding.FragmentFormStnkTahunanBinding
 import com.mobile.azrinurvani.dnaproject.helper.FileCompressor
 import com.mobile.azrinurvani.dnaproject.helper.FunctionGlobalDir
@@ -36,38 +39,40 @@ import java.util.*
 import javax.inject.Inject
 import kotlin.jvm.Throws
 
-class FormStnkTahunanFragment : BaseFragment() {
+
+class FormStnkHilangFragment : BaseFragment() {
 
 
-    private lateinit var binding: FragmentFormStnkTahunanBinding
+    private lateinit var binding : FragmentFormStnkHilangBinding
+
     private lateinit var viewModel: StnkViewModel
 
     @Inject
     lateinit var vmFactory : ViewModelProviderFactory
 
-    private var bitmapImage :Bitmap? = null
+    private var bitmapImage : Bitmap? = null
 
     var mPhotoFile: File? = null
     var mCompressor: FileCompressor? = null
 
-    private var jenisDoc = 5
+    private var jenisDoc = 1
     private var ktpAvail = false
     private var stnkAvail = false
     private var bpkbAvail = false
     private var ktpImagePath : String = "-"
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         mCompressor = activity?.let { FileCompressor(it) }
         mCompressor?.setDestinationDirectoryPath(FunctionGlobalDir.getStorageCard + FunctionGlobalDir.appFolder)
+
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
-        binding = FragmentFormStnkTahunanBinding.inflate(inflater,container,false)
-        val view = binding.root
-        return view
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        binding = FragmentFormStnkHilangBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -98,16 +103,16 @@ class FormStnkTahunanFragment : BaseFragment() {
             phone.isEmpty()||
             address.isEmpty()
         ){
-            Toast.makeText(activity,"Mohon lengkapi FORM !",Toast.LENGTH_LONG).show()
+            Toast.makeText(activity,"Mohon lengkapi FORM !", Toast.LENGTH_LONG).show()
         }else{
-            viewModel.saveDataIntoDb(1,name,no_ktp,phone,address,noPolisi,ktpAvail,bpkbAvail,stnkAvail,false,false,ktpImagePath,1)
-            Toast.makeText(activity,"Submit successful",Toast.LENGTH_LONG).show()
+            viewModel.saveDataIntoDb(3,name,no_ktp,phone,address,noPolisi,ktpAvail,bpkbAvail,stnkAvail,false,false,ktpImagePath,1)
+            Toast.makeText(activity,"Submit successful", Toast.LENGTH_LONG).show()
             moveToHome()
         }
     }
 
     private fun moveToHome(){
-        val directions= FormStnkTahunanFragmentDirections.actionFormStnkTahunanFragmentToFragmentHome()
+        val directions= FormStnkHilangFragmentDirections.actionFormStnkHilangFragmentToFragmentHome()
         view?.findNavController()?.navigate(directions)
 
     }
@@ -130,7 +135,7 @@ class FormStnkTahunanFragment : BaseFragment() {
     private fun moveToCamera(){
         binding.btnTakeKtpFromCamera.setOnClickListener {
 
-        requestStoragePermission(true)
+            requestStoragePermission(true)
 
 //            val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
 //            if (activity?.packageManager?.let { it1 -> intent.resolveActivity(it1) } != null) {
@@ -158,7 +163,7 @@ class FormStnkTahunanFragment : BaseFragment() {
                             mCompressor?.setDestinationDirectoryPath(FunctionGlobalDir.getStorageCard + FunctionGlobalDir.appFolder)
                         } else {
                             //dir tidak ditemukan
-                            Toast.makeText(activity,"Directory not found",Toast.LENGTH_LONG).show()
+                            Toast.makeText(activity,"Directory not found", Toast.LENGTH_LONG).show()
                         }
                     }
 
@@ -202,14 +207,17 @@ class FormStnkTahunanFragment : BaseFragment() {
                 )
                 mPhotoFile = photoFile
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
-                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO)
+                startActivityForResult(takePictureIntent,
+                    REQUEST_TAKE_PHOTO
+                )
             }
         }
     }
 
     private fun dispatchGalleryIntent() {
-        val pickPhoto = Intent(Intent.ACTION_PICK,
-                MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        val pickPhoto = Intent(
+            Intent.ACTION_PICK,
+            MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
         pickPhoto.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         startActivityForResult(pickPhoto, REQUEST_GALLERY_PHOTO)
     }
@@ -263,23 +271,23 @@ class FormStnkTahunanFragment : BaseFragment() {
                 ktpImagePath = mPhotoFile.toString()
                 Log.d(TAG, "onActivityResult: $mPhotoFile")
                 Toast.makeText(activity, "Image Path : $mPhotoFile", Toast.LENGTH_SHORT).show()
-            }
-            else if (requestCode == REQUEST_GALLERY_PHOTO) {
+            } else if (requestCode == REQUEST_GALLERY_PHOTO) {
                 val selectedImage = data?.data
                 try {
-                    mPhotoFile = mCompressor?.compressToFile(File(getRealPathFromUri(selectedImage)))
+                    mPhotoFile =
+                        mCompressor?.compressToFile(File(getRealPathFromUri(selectedImage)))
                 } catch (e: IOException) {
                     e.printStackTrace()
                 }
                 activity?.let { Glide.with(it).load(mPhotoFile).into(binding.imgTakePictKtp) }
             }
         }
-
     }
 
+
     companion object {
-        private const val TAG = "FormStnkTahunanFragment"
-        private const val REQUEST_TAKE_PHOTO = 101
-        private const val REQUEST_GALLERY_PHOTO = 102
+        private const val TAG = "FormStnkHilangFragment"
+            private const val REQUEST_TAKE_PHOTO = 101
+            private const val REQUEST_GALLERY_PHOTO = 102
     }
 }

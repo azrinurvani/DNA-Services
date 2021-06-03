@@ -8,7 +8,7 @@
     android:layout_marginRight="16dp"
     android:layout_marginLeft="16dp"
     android:orientation="vertical"
-    tools:context=".view.stnk.FormStnkLimaTahunanFragment">
+    tools:context=".view.stnk.FormStnkHilangFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -89,9 +89,9 @@
 
             <TextView
                 android:text="@string/centang_perlengkapan_attention"
+                android:textStyle="italic"
                 android:layout_marginTop="8dp"
                 android:textColor="@color/dark_navy"
-                android:textStyle="italic"
                 android:textSize="14sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -99,62 +99,37 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <CheckBox
+                    android:id="@+id/cbo_bpkb"
+                    android:text="@string/bpkb_asli"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_weight="1"/>
 
-                    <CheckBox
-                        android:id="@+id/cbo_bpkb"
-                        android:text="@string/bpkb_asli"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"/>
-
-                    <CheckBox
-                        android:id="@+id/cbo_ktp"
-                        android:text="@string/ktp_asli"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"/>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <CheckBox
+                    android:id="@+id/cbo_ktp"
+                    android:text="@string/ktp_asli"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="8dp">
+                    android:layout_weight="1"/>
 
-                    <CheckBox
-                        android:id="@+id/cbo_stnk_asli"
-                        android:text="@string/stnk_asli"
-                        android:layout_weight="1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                <CheckBox
+                    android:id="@+id/cbo_stnk_asli"
+                    android:text="@string/stnk_asli"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-                    <CheckBox
-                        android:id="@+id/cbo_cek_fisik"
-                        android:text="@string/cek_fisik_kendaraan"
-                        android:layout_weight="1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-
-                </LinearLayout>
 
             </LinearLayout>
-
-
 
             <TextView
                 android:text="Upload KTP Anda"
                 android:textStyle="italic"
                 android:textSize="14sp"
-                android:layout_marginBottom="4dp"
                 android:textColor="@color/red"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -195,7 +170,6 @@
                 android:layout_height="150dp"/>
 
         </LinearLayout>
-
 
     </androidx.core.widget.NestedScrollView>
 

@@ -16,6 +16,15 @@
         <action
             android:id="@+id/action_fragmentHome_to_formStnkLimaTahunanFragment"
             app:destination="@id/formStnkLimaTahunanFragment" />
+        <action
+            android:id="@+id/action_fragmentHome_to_formStnkHilangFragment"
+            app:destination="@id/formStnkHilangFragment" />
+        <action
+            android:id="@+id/action_fragmentHome_to_formBalikNamaFragment"
+            app:destination="@id/formBalikNamaFragment" />
+        <action
+            android:id="@+id/action_fragmentHome_to_formMutasiFragment"
+            app:destination="@id/formMutasiFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentEkspedisi"
@@ -67,6 +76,33 @@
 
         <action
             android:id="@+id/action_aprovalStnkFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/formStnkHilangFragment"
+        android:name="com.mobile.azrinurvani.dnaproject.view.stnk.FormStnkHilangFragment"
+        android:label="Form STNK Hilang"
+        tools:layout="@layout/fragment_form_stnk_hilang">
+        <action
+            android:id="@+id/action_formStnkHilangFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/formBalikNamaFragment"
+        android:name="com.mobile.azrinurvani.dnaproject.view.stnk.FormBalikNamaFragment"
+        android:label="Form Balik Nama"
+        tools:layout="@layout/fragment_form_balik_nama">
+        <action
+            android:id="@+id/action_formBalikNamaFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/formMutasiFragment"
+        android:name="com.mobile.azrinurvani.dnaproject.view.stnk.FormMutasiFragment"
+        android:label="Form Mutasi"
+        tools:layout="@layout/fragment_form_mutasi">
+        <action
+            android:id="@+id/action_formMutasiFragment_to_fragmentHome"
             app:destination="@id/fragmentHome" />
     </fragment>
 </navigation>

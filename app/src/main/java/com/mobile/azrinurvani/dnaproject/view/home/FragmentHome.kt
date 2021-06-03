@@ -41,6 +41,9 @@ class FragmentHome : BaseFragment() {
 
         moveToFragmentStnkTahunan()
         moveToFragmentStnk5Tahunan()
+        moveToFragmentStnkHilang()
+        moveToFragmentBalikNama()
+        moveToFragmentMutasi()
 
     }
 
@@ -54,6 +57,27 @@ class FragmentHome : BaseFragment() {
     private fun moveToFragmentStnk5Tahunan(){
         binding.cardPajak5Tahunan.setOnClickListener {
             val directions= FragmentHomeDirections.actionFragmentHomeToFormStnkLimaTahunanFragment()
+            it.findNavController().navigate(directions)
+        }
+    }
+
+    private fun moveToFragmentStnkHilang(){
+        binding.cardStnkHilang.setOnClickListener {
+            val directions= FragmentHomeDirections.actionFragmentHomeToFormStnkHilangFragment()
+            it.findNavController().navigate(directions)
+        }
+    }
+
+    private fun moveToFragmentBalikNama(){
+        binding.cardBalikNama.setOnClickListener {
+            val directions= FragmentHomeDirections.actionFragmentHomeToFormBalikNamaFragment()
+            it.findNavController().navigate(directions)
+        }
+    }
+
+    private fun moveToFragmentMutasi(){
+        binding.cardMutasi.setOnClickListener {
+            val directions= FragmentHomeDirections.actionFragmentHomeToFormMutasiFragment()
             it.findNavController().navigate(directions)
         }
     }

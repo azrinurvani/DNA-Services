@@ -54,7 +54,7 @@ class FragmentDetailStnk : BaseFragment() {
             if(!it.isNullOrEmpty()){
                 viewModel.setRecyclerAdapter(it as ArrayList<BiroJasa>)
             }else{
-                Toast.makeText(activity,"Error in fetching data...", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity,"Data is NULL", Toast.LENGTH_LONG).show()
             }
         })
         viewModel.getBiroJasaData()

@@ -8,7 +8,7 @@
     android:layout_marginRight="16dp"
     android:layout_marginLeft="16dp"
     android:orientation="vertical"
-    tools:context=".view.stnk.FormStnkLimaTahunanFragment">
+    tools:context=".view.stnk.FormMutasiFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -120,6 +120,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"/>
 
+                    <CheckBox
+                        android:id="@+id/cbo_stnk_asli"
+                        android:text="@string/stnk_asli"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
 
                 </LinearLayout>
 
@@ -130,15 +137,15 @@
                     android:layout_marginBottom="8dp">
 
                     <CheckBox
-                        android:id="@+id/cbo_stnk_asli"
-                        android:text="@string/stnk_asli"
+                        android:id="@+id/cbo_cek_fisik"
+                        android:text="@string/cek_fisik_kendaraan"
                         android:layout_weight="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
                     <CheckBox
-                        android:id="@+id/cbo_cek_fisik"
-                        android:text="@string/cek_fisik_kendaraan"
+                        android:id="@+id/cbo_kwitansi"
+                        android:text="@string/kwitansi_dengan_materai"
                         android:layout_weight="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>

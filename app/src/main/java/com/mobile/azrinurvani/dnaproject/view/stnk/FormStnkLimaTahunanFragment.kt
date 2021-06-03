@@ -59,6 +59,7 @@ class FormStnkLimaTahunanFragment : BaseFragment() {
     private var stnkAvail = false
     private var bpkbAvail = false
     private var cpvAvail = false
+    private var ktpImagePath : String = "-"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -104,7 +105,7 @@ class FormStnkLimaTahunanFragment : BaseFragment() {
         ){
             Toast.makeText(activity,"Mohon lengkapi FORM !",Toast.LENGTH_LONG).show()
         }else{
-            viewModel.saveDataIntoDb(2,name,no_ktp,phone,address,noPolisi,ktpAvail,bpkbAvail,stnkAvail,cpvAvail,"-",1)
+            viewModel.saveDataIntoDb(2,name,no_ktp,phone,address,noPolisi,ktpAvail,bpkbAvail,stnkAvail,cpvAvail,false,ktpImagePath,1)
             Toast.makeText(activity,"Submit successful",Toast.LENGTH_LONG).show()
             moveToHome()
         }
@@ -261,6 +262,7 @@ class FormStnkLimaTahunanFragment : BaseFragment() {
                 }
                 activity?.let { Glide.with(it).load(mPhotoFile).into(binding.imgTakePictKtp) }
                 Log.d(TAG, "onActivityResult: $mPhotoFile")
+                ktpImagePath = mPhotoFile.toString()
                 Toast.makeText(activity, "Image Path : $mPhotoFile", Toast.LENGTH_SHORT).show()
             }
         }
