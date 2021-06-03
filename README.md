@@ -9,6 +9,16 @@
 5. RxJava2
 
 # DEV-LOG
+Ver.0.0.6
+- Submit Form STNK Hilang (Design, Fragment)
+- Submit Form STNK Hilang (Design, Fragment)
+- Submit Form Balik Nama (Design, Fragment)
+- Add Fragment Module Builders
+- Improve Navigation Graph
+- Bug Fix Approval STNK
+
+note : Upload image via gallery masih belum jalan
+
 Ver.0.0.5 - part 2
 - Update model BiroJasa.kt
 - Update design list pengajuan pada FragmentDetailStnk.kt
