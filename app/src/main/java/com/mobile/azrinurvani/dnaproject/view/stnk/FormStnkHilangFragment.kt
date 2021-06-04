@@ -274,8 +274,8 @@ class FormStnkHilangFragment : BaseFragment() {
             } else if (requestCode == REQUEST_GALLERY_PHOTO) {
                 val selectedImage = data?.data
                 try {
-                    mPhotoFile =
-                        mCompressor?.compressToFile(File(getRealPathFromUri(selectedImage)))
+                    mPhotoFile = mCompressor?.compressToFile(File(getRealPathFromUri(selectedImage)))
+                    ktpImagePath = mPhotoFile.toString()
                 } catch (e: IOException) {
                     e.printStackTrace()
                 }

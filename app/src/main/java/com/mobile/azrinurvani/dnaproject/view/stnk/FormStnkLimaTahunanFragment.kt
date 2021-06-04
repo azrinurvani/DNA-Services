@@ -83,6 +83,7 @@ class FormStnkLimaTahunanFragment : BaseFragment() {
 
 
         moveToCamera()
+        moveToGallery()
         binding.btnSubmit.setOnClickListener {
             saveData()
         }
@@ -147,7 +148,7 @@ class FormStnkLimaTahunanFragment : BaseFragment() {
 
     private fun moveToGallery(){
         binding.btnTakeKtpFromGalerry.setOnClickListener {
-            //action move to gallery
+            requestStoragePermission(false)
         }
     }
 
@@ -265,6 +266,19 @@ class FormStnkLimaTahunanFragment : BaseFragment() {
                 ktpImagePath = mPhotoFile.toString()
                 Toast.makeText(activity, "Image Path : $mPhotoFile", Toast.LENGTH_SHORT).show()
             }
+            else if (requestCode == REQUEST_GALLERY_PHOTO) {
+                val selectedImage = data?.data
+                try {
+                    mPhotoFile = mCompressor?.compressToFile(File(getRealPathFromUri(selectedImage)))
+                    ktpImagePath = mPhotoFile.toString()
+                    Log.d(TAG, "onActivityResult: path from gallery $mPhotoFile")
+                    Toast.makeText(activity,"Image path from gallery $mPhotoFile",Toast.LENGTH_LONG).show()
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                    Log.e(TAG, "onActivityResult: error when getting path image : ${e.localizedMessage}" )
+                }
+                activity?.let { Glide.with(it).load(mPhotoFile).into(binding.imgTakePictKtp) }
+            }
         }
 
     }
@@ -272,5 +286,6 @@ class FormStnkLimaTahunanFragment : BaseFragment() {
     companion object {
         private const val TAG = "FormStnkLimaTahunanFrag"
         private const val REQUEST_TAKE_PHOTO = 101
+        private const val REQUEST_GALLERY_PHOTO = 102
     }
 }

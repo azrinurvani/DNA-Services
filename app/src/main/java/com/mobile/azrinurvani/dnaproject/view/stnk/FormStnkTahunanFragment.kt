@@ -158,7 +158,7 @@ class FormStnkTahunanFragment : BaseFragment() {
                             mCompressor?.setDestinationDirectoryPath(FunctionGlobalDir.getStorageCard + FunctionGlobalDir.appFolder)
                         } else {
                             //dir tidak ditemukan
-                            Toast.makeText(activity,"Directory not found",Toast.LENGTH_LONG).show()
+                            //Toast.makeText(activity,"Directory not found",Toast.LENGTH_LONG).show()
                         }
                     }
 
@@ -268,8 +268,12 @@ class FormStnkTahunanFragment : BaseFragment() {
                 val selectedImage = data?.data
                 try {
                     mPhotoFile = mCompressor?.compressToFile(File(getRealPathFromUri(selectedImage)))
+                    ktpImagePath = mPhotoFile.toString()
+                    Log.d(TAG, "onActivityResult: path from gallery $mPhotoFile")
+                    Toast.makeText(activity,"Image path from gallery $mPhotoFile",Toast.LENGTH_LONG).show()
                 } catch (e: IOException) {
                     e.printStackTrace()
+                    Log.e(TAG, "onActivityResult: error when getting path image : ${e.localizedMessage}" )
                 }
                 activity?.let { Glide.with(it).load(mPhotoFile).into(binding.imgTakePictKtp) }
             }
