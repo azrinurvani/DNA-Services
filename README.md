@@ -9,6 +9,10 @@
 5. RxJava2
 
 # DEV-LOG
+Ver.0.0.7
+- Bug Fix upload image via gallery (Pada semua Form STNK)
+- Bug Fix save path image null using ROOM (Pada semua Form STNK)
+
 Ver.0.0.6
 - Submit Form STNK Hilang (Design, Fragment)
 - Submit Form STNK Hilang (Design, Fragment)
