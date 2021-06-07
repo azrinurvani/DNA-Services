@@ -9,6 +9,16 @@
 5. RxJava2
 
 # DEV-LOG
+Ver.0.0.8
+- Bug Fix move to Gallery tidak bisa pada STNK 5 Tahunan
+- Add EkspedisiFragment
+- Add FormPengirimanAksesorisFragment
+- Add FormPengirimanMotorFragment
+- Add field pada tabel (entity/model) Ekspedisi
+- Update Nav Graph dan FragmentBuildersModule
+- Design layout EkspedisiFragment
+- Design layout FormPengirimanMotor -> ON_PROGRESS
+
 Ver.0.0.7
 - Bug Fix upload image via gallery (Pada semua Form STNK)
 - Bug Fix save path image null using ROOM (Pada semua Form STNK)
