@@ -7,17 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import com.mobile.azrinurvani.dnaproject.BaseFragment
 import com.mobile.azrinurvani.dnaproject.R
-import dagger.android.support.DaggerFragment
 
 
-class FragmentDetailEkspedisi : BaseFragment() {
+class FormPengirimanMotorFragment : BaseFragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
 
-        }
     }
 
     override fun onCreateView(
@@ -25,10 +22,14 @@ class FragmentDetailEkspedisi : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detail_ekspedisi, container, false)
+        return inflater.inflate(R.layout.fragment_form_pengiriman_motor, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 
     companion object {
-
+        private const val TAG = "FormPengirimanMotorFrag"
     }
 }

@@ -1,6 +1,9 @@
 package com.mobile.azrinurvani.dnaproject.di
 
-import com.mobile.azrinurvani.dnaproject.view.ekspedisi.FragmentDetailEkspedisi
+import com.mobile.azrinurvani.dnaproject.view.ekspedisi.EkspedisiFragment
+import com.mobile.azrinurvani.dnaproject.view.ekspedisi.FormPengirimanAksesorisFragment
+import com.mobile.azrinurvani.dnaproject.view.ekspedisi.FormPengirimanMotorFragment
+import com.mobile.azrinurvani.dnaproject.view.ekspedisi.FragmentListDetailEkspedisi
 import com.mobile.azrinurvani.dnaproject.view.help.FragmentHelp
 import com.mobile.azrinurvani.dnaproject.view.home.FragmentHome
 import com.mobile.azrinurvani.dnaproject.view.stnk.*
@@ -14,10 +17,10 @@ abstract class FragmentBuildersModule {
     abstract fun contributeFragmentHome() : FragmentHome
 
     @ContributesAndroidInjector
-    abstract fun contributeFragmentStnk() : FragmentDetailStnk
+    abstract fun contributeFragmentStnk() : FragmentListDetailStnk
 
     @ContributesAndroidInjector
-    abstract fun contributeFragmentEkspedisi() : FragmentDetailEkspedisi
+    abstract fun contributeFragmentDetailListEkspedisi() : FragmentListDetailEkspedisi
 
     @ContributesAndroidInjector
     abstract fun contributeFragmentHelp() : FragmentHelp
@@ -39,4 +42,15 @@ abstract class FragmentBuildersModule {
 
     @ContributesAndroidInjector
     abstract fun contributeFragmentAprovalStnk() : AprovalStnkFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributeFragmentEkspedisi() : EkspedisiFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributeFragmentFormPengirimanMotor() : FormPengirimanMotorFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributeFragmentFormPengirimanAksesoris() : FormPengirimanAksesorisFragment
+
+
 }

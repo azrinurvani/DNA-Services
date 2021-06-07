@@ -18,7 +18,7 @@ class MainActivity : BaseActivity() {
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration : AppBarConfiguration
 
-    private val listFragment = setOf(R.id.fragmentHome,R.id.fragmentStnk,R.id.fragmentEkspedisi,R.id.fragmentHelp)
+    private val listFragment = setOf(R.id.fragmentHome,R.id.fragmentListStnk,R.id.fragmentListEkspedisi,R.id.fragmentHelp)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

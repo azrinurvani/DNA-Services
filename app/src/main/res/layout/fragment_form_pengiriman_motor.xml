@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.ekspedisi.FormPengirimanMotorFragment"
+    android:layout_marginTop="24dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginLeft="16dp"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Detail Pengirim"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="@font/open_sans_bold"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edt_nama_pengirim"
+                android:textAllCaps="false"
+                android:hint="@string/hint_nama_pengirim"
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp"
+                android:backgroundTint="@color/dark_navy"
+                android:background="@drawable/bg_edittext"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edt_phone_pengirim"
+                android:textAllCaps="false"
+                android:hint="@string/phone_hint"
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp"
+                android:backgroundTint="@color/dark_navy"
+                android:background="@drawable/bg_edittext"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edt_alamat_pengirim"
+                android:textAllCaps="false"
+                android:hint="@string/address_hint"
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp"
+                android:backgroundTint="@color/dark_navy"
+                android:background="@drawable/bg_edittext"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edt_tgl_pengiriman"
+                android:textAllCaps="false"
+                android:hint="31 Mei 2021"
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp"
+                android:backgroundTint="@color/dark_navy"
+                android:background="@drawable/bg_edittext"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24dp"/>
+
+            <TextView
+                android:text="Detail Penerima"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="@font/open_sans_bold"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edt_nama_penerima"
+                android:textAllCaps="false"
+                android:hint="@string/hint_nama_pengirim"
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp"
+                android:backgroundTint="@color/dark_navy"
+                android:background="@drawable/bg_edittext"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edt_phone_penerima"
+                android:textAllCaps="false"
+                android:hint="@string/phone_hint"
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp"
+                android:backgroundTint="@color/dark_navy"
+                android:background="@drawable/bg_edittext"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edt_alamat_penerima"
+                android:textAllCaps="false"
+                android:hint="@string/address_hint"
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp"
+                android:backgroundTint="@color/dark_navy"
+                android:background="@drawable/bg_edittext"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edt_tgl_diterima"
+                android:textAllCaps="false"
+                android:hint="31 Mei 2021"
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp"
+                android:backgroundTint="@color/dark_navy"
+                android:background="@drawable/bg_edittext"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24dp"/>
+
+            <TextView
+                android:text="Detail Motor"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="@font/open_sans_bold"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--card kelas motor-->
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_submit"
+        android:layout_marginBottom="64dp"
+        android:layout_marginHorizontal="24dp"
+        android:background="@drawable/bg_button"
+        android:backgroundTint="@color/bg_button_state"
+        android:text="@string/order"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

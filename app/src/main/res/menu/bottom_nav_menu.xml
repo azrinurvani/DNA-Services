@@ -7,12 +7,12 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/fragmentStnk"
+        android:id="@+id/fragmentListStnk"
         android:icon="@drawable/ic_baseline_receipt_24"
         android:title="@string/title_detail_biro_jasa" />
 
     <item
-        android:id="@+id/fragmentEkspedisi"
+        android:id="@+id/fragmentListEkspedisi"
         android:icon="@drawable/ic_baseline_two_wheeler_24"
         android:title="@string/title_ekspedisi" />
 

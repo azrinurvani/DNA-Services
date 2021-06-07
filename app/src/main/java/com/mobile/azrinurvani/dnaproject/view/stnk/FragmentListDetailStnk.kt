@@ -10,15 +10,15 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mobile.azrinurvani.dnaproject.BaseFragment
-import com.mobile.azrinurvani.dnaproject.databinding.FragmentDetailStnkBinding
+import com.mobile.azrinurvani.dnaproject.databinding.FragmentListDetailStnkBinding
 import com.mobile.azrinurvani.dnaproject.model.BiroJasa
 import com.mobile.azrinurvani.dnaproject.viewmodel.ViewModelProviderFactory
 import javax.inject.Inject
 
 
-class FragmentDetailStnk : BaseFragment() {
+class FragmentListDetailStnk : BaseFragment() {
 
-    private lateinit var binding : FragmentDetailStnkBinding
+    private lateinit var binding : FragmentListDetailStnkBinding
 
     private lateinit var viewModel: StnkViewModel
 
@@ -34,7 +34,7 @@ class FragmentDetailStnk : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentDetailStnkBinding.inflate(inflater,container,false)
+        binding = FragmentListDetailStnkBinding.inflate(inflater,container,false)
         val view = binding.root
         return view
     }

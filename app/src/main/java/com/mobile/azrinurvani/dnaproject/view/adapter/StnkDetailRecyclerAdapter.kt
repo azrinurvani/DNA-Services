@@ -6,7 +6,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.mobile.azrinurvani.dnaproject.databinding.LayoutListStnkDetailBinding
 import com.mobile.azrinurvani.dnaproject.model.BiroJasa
-import com.mobile.azrinurvani.dnaproject.view.stnk.FragmentDetailStnkDirections
+import com.mobile.azrinurvani.dnaproject.view.stnk.FragmentListDetailStnkDirections
 
 class StnkDetailRecyclerAdapter : RecyclerView.Adapter<StnkDetailRecyclerAdapter.StnkDetailViewHolder>() {
     private lateinit var bindingLayout : LayoutListStnkDetailBinding
@@ -32,7 +32,7 @@ class StnkDetailRecyclerAdapter : RecyclerView.Adapter<StnkDetailRecyclerAdapter
         holder.itemView.setOnClickListener {view->
             //navigate to AprovalStnkFragment
             listBiroJasa[position].let {data->
-                val directions = FragmentDetailStnkDirections.actionFragmentStnkToAprovalStnkFragment(data)
+                val directions = FragmentListDetailStnkDirections.actionFragmentStnkToAprovalStnkFragment(data)
                 view.findNavController().navigate(directions)
             }
         }

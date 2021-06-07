@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.ekspedisi.EkspedisiFragment"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@color/grey_light"
+    android:layout_margin="16dp">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_pengiriman_aksesoris"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_delivery_yellow"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="16dp"/>
+
+                <TextView
+                    android:text="Pengiriman Aksesoris"
+                    android:textSize="28sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+
+                <TextView
+                    android:text="@string/desc_ekspedisi_sparepart"
+                    android:textSize="20sp"
+                    android:lines="4"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/open_sans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="32dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_pengiriman_motor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_motor_bike"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="16dp"/>
+
+                <TextView
+                    android:text="Pengiriman Motor"
+                    android:textSize="28sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+
+                <TextView
+                    android:text="Kami siap mengirimkan motor anda hingga sampai tujuan dengan aman, nyaman dan terjangkau"
+                    android:textSize="20sp"
+                    android:lines="4"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/open_sans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

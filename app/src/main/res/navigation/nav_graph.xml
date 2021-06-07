@@ -25,17 +25,20 @@
         <action
             android:id="@+id/action_fragmentHome_to_formMutasiFragment"
             app:destination="@id/formMutasiFragment" />
+        <action
+            android:id="@+id/action_fragmentHome_to_ekspedisiFragment"
+            app:destination="@id/ekspedisiFragment" />
     </fragment>
     <fragment
-        android:id="@+id/fragmentEkspedisi"
-        android:name="com.mobile.azrinurvani.dnaproject.view.ekspedisi.FragmentDetailEkspedisi"
+        android:id="@+id/fragmentListEkspedisi"
+        android:name="com.mobile.azrinurvani.dnaproject.view.ekspedisi.FragmentListDetailEkspedisi"
         android:label="Ekspedisi"
-        tools:layout="@layout/fragment_detail_ekspedisi" />
+        tools:layout="@layout/fragment_list_detail_ekspedisi" />
     <fragment
-        android:id="@+id/fragmentStnk"
-        android:name="com.mobile.azrinurvani.dnaproject.view.stnk.FragmentDetailStnk"
+        android:id="@+id/fragmentListStnk"
+        android:name="com.mobile.azrinurvani.dnaproject.view.stnk.FragmentListDetailStnk"
         android:label="List Pengajuan STNK"
-        tools:layout="@layout/fragment_detail_stnk" >
+        tools:layout="@layout/fragment_list_detail_stnk" >
         <action
             android:id="@+id/action_fragmentStnk_to_aprovalStnkFragment"
             app:destination="@id/aprovalStnkFragment" />
@@ -103,6 +106,39 @@
         tools:layout="@layout/fragment_form_mutasi">
         <action
             android:id="@+id/action_formMutasiFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/ekspedisiFragment"
+        android:name="com.mobile.azrinurvani.dnaproject.view.ekspedisi.EkspedisiFragment"
+        android:label="Ekspedisi"
+        tools:layout="@layout/fragment_ekspedisi">
+        <action
+            android:id="@+id/action_ekspedisiFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_ekspedisiFragment_to_formPengirimanAksesorisFragment"
+            app:destination="@id/formPengirimanAksesorisFragment" />
+        <action
+            android:id="@+id/action_ekspedisiFragment_to_formPengirimanMotorFragment"
+            app:destination="@id/formPengirimanMotorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formPengirimanMotorFragment"
+        android:name="com.mobile.azrinurvani.dnaproject.view.ekspedisi.FormPengirimanMotorFragment"
+        android:label="Form Pengiriman Motor"
+        tools:layout="@layout/fragment_form_pengiriman_motor">
+        <action
+            android:id="@+id/action_formPengirimanMotorFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/formPengirimanAksesorisFragment"
+        android:name="com.mobile.azrinurvani.dnaproject.view.ekspedisi.FormPengirimanAksesorisFragment"
+        android:label="Form Pengiriman Aksesoris atau Spare Part"
+        tools:layout="@layout/fragment_form_pengiriman_aksesoris">
+        <action
+            android:id="@+id/action_formPengirimanAksesorisFragment_to_fragmentHome"
             app:destination="@id/fragmentHome" />
     </fragment>
 </navigation>

@@ -44,6 +44,7 @@ class FragmentHome : BaseFragment() {
         moveToFragmentStnkHilang()
         moveToFragmentBalikNama()
         moveToFragmentMutasi()
+        moteToFragmentEkspedisi()
 
     }
 
@@ -81,5 +82,14 @@ class FragmentHome : BaseFragment() {
             it.findNavController().navigate(directions)
         }
     }
+
+    private fun moteToFragmentEkspedisi(){
+        binding.cardEkspedisi.setOnClickListener {
+            val directions= FragmentHomeDirections.actionFragmentHomeToEkspedisiFragment()
+            it.findNavController().navigate(directions)
+        }
+    }
+
+
 
 }
