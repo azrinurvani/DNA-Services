@@ -9,6 +9,16 @@
 5. RxJava2
 
 # DEV-LOG
+Ver.0.0.9 
+- Add EkspedisiDao
+- Update DTO Ekspedisi
+- Add halaman Detail Pengiriman Motor
+- Add EkspedisiViewModel
+- Submit pengiriman motor
+- Update Navigation Graph
+- Update FragmentBuildersModule
+- Update ViewModelsModule
+
 Ver.0.0.8
 - Bug Fix move to Gallery tidak bisa pada STNK 5 Tahunan
 - Add EkspedisiFragment
