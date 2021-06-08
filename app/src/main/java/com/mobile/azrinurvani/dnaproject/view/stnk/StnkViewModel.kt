@@ -6,7 +6,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.mobile.azrinurvani.dnaproject.model.BiroJasa
 import com.mobile.azrinurvani.dnaproject.model.db.DnaDatabase
-import com.mobile.azrinurvani.dnaproject.view.adapter.StnkDetailRecyclerAdapter
+import com.mobile.azrinurvani.dnaproject.view.stnk.adapter.StnkDetailRecyclerAdapter
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers

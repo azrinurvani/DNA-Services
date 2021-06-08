@@ -1,6 +1,7 @@
 package com.mobile.azrinurvani.dnaproject.di
 
 import androidx.lifecycle.ViewModel
+import com.mobile.azrinurvani.dnaproject.view.ekspedisi.EkspedisiViewModel
 import com.mobile.azrinurvani.dnaproject.view.home.HomeViewModel
 import com.mobile.azrinurvani.dnaproject.view.stnk.StnkViewModel
 import dagger.Binds
@@ -19,6 +20,11 @@ abstract class ViewModelsModule{
     @IntoMap
     @ViewModelKey(StnkViewModel::class)
     abstract fun bindStnkTahunanViewModel(stnkViewModel: StnkViewModel) : ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(EkspedisiViewModel::class)
+    abstract fun bindEkspedisiViewModel(ekspedisiViewModel: EkspedisiViewModel) : ViewModel
 
 
 }

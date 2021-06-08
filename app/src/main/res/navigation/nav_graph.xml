@@ -131,6 +131,9 @@
         <action
             android:id="@+id/action_formPengirimanMotorFragment_to_fragmentHome"
             app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_formPengirimanMotorFragment_to_detailPengirimanMotorFragment"
+            app:destination="@id/detailPengirimanMotorFragment" />
     </fragment>
     <fragment
         android:id="@+id/formPengirimanAksesorisFragment"
@@ -139,6 +142,21 @@
         tools:layout="@layout/fragment_form_pengiriman_aksesoris">
         <action
             android:id="@+id/action_formPengirimanAksesorisFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPengirimanMotorFragment"
+        android:name="com.mobile.azrinurvani.dnaproject.view.ekspedisi.DetailPengirimanMotorFragment"
+        android:label="Detail Pengiriman Motor"
+        tools:layout="@layout/fragment_detail_pengiriman_motor" >
+
+        <argument
+            android:name="data_detail_pengiriman_motor"
+            app:argType="com.mobile.azrinurvani.dnaproject.model.Ekspedisi"
+            />
+
+        <action
+            android:id="@+id/action_detailPengirimanMotorFragment_to_fragmentHome"
             app:destination="@id/fragmentHome" />
     </fragment>
 </navigation>

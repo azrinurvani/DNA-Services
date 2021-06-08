@@ -1,4 +1,4 @@
-package com.mobile.azrinurvani.dnaproject.view.adapter
+package com.mobile.azrinurvani.dnaproject.view.stnk.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

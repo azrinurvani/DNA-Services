@@ -5,17 +5,20 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.mobile.azrinurvani.dnaproject.model.BiroJasa
+import com.mobile.azrinurvani.dnaproject.model.Ekspedisi
 import com.mobile.azrinurvani.dnaproject.model.User
 import com.mobile.azrinurvani.dnaproject.model.db.dao.BiroJasaDao
+import com.mobile.azrinurvani.dnaproject.model.db.dao.EkspedisiDao
 import com.mobile.azrinurvani.dnaproject.model.db.dao.UserDao
 
 const val DB_VERSION = 1
 const val DB_NAME = "DNAServices.db"
 
-@Database(entities = [User::class,BiroJasa::class],version = DB_VERSION,exportSchema = false)
+@Database(entities = [User::class,BiroJasa::class,Ekspedisi::class],version = DB_VERSION,exportSchema = false)
 abstract class DnaDatabase : RoomDatabase() {
     abstract fun userDao() : UserDao
     abstract fun biroJasaDao():BiroJasaDao
+    abstract fun ekspedisiDao():EkspedisiDao
 
     companion object{
         @Volatile

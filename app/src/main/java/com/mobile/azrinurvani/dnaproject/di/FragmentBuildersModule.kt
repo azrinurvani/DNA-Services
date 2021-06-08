@@ -1,9 +1,6 @@
 package com.mobile.azrinurvani.dnaproject.di
 
-import com.mobile.azrinurvani.dnaproject.view.ekspedisi.EkspedisiFragment
-import com.mobile.azrinurvani.dnaproject.view.ekspedisi.FormPengirimanAksesorisFragment
-import com.mobile.azrinurvani.dnaproject.view.ekspedisi.FormPengirimanMotorFragment
-import com.mobile.azrinurvani.dnaproject.view.ekspedisi.FragmentListDetailEkspedisi
+import com.mobile.azrinurvani.dnaproject.view.ekspedisi.*
 import com.mobile.azrinurvani.dnaproject.view.help.FragmentHelp
 import com.mobile.azrinurvani.dnaproject.view.home.FragmentHome
 import com.mobile.azrinurvani.dnaproject.view.stnk.*
@@ -51,6 +48,9 @@ abstract class FragmentBuildersModule {
 
     @ContributesAndroidInjector
     abstract fun contributeFragmentFormPengirimanAksesoris() : FormPengirimanAksesorisFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributeFragmentDetailPengirimanMotor() : DetailPengirimanMotorFragment
 
 
 }

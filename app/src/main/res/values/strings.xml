@@ -40,5 +40,7 @@
     <string name="hint_nama_pengirim">Nama pengirim</string>
     <string name="phone_hint">08123xxxxxxx</string>
     <string name="address_hint">Jln Haji Soebrantas, Tampan, Pekanbaru</string>
-    <string name="order">Order</string>
+    <string name="order">Pesan</string>
+    <string name="yamaha_xabre">Yamaha Xabre</string>
+    <string name="hint_nama_penerima">Nama Penerima</string>
 </resources>
