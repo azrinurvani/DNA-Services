@@ -9,6 +9,15 @@
 5. RxJava2
 
 # DEV-LOG
+Ver.0.1.0
+- Add halaman Detail Pengiriman Barang (Aksesoris/Sparepart/Motor)
+- Submit Pengiriman Barang/Motor 
+- Add halaman List Ekspedisi (EkspediisiRecyclerAdapter)
+- Add EkspedisiModule
+- Add halaman untuk konfirmasi paket diterima
+- Update Navigation Graph
+- Update FragmentBuildersModule
+
 Ver.0.0.9 
 - Add EkspedisiDao
 - Update DTO Ekspedisi
