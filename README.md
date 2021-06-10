@@ -9,6 +9,9 @@
 5. RxJava2
 
 # DEV-LOG
+Ver.0.1.0 - Part 2
+- Update AppComponent
+
 Ver.0.1.0
 - Add halaman Detail Pengiriman Barang (Aksesoris/Sparepart/Motor)
 - Submit Pengiriman Barang/Motor 
