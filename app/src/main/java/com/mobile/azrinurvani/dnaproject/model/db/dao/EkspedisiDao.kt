@@ -24,6 +24,9 @@ interface EkspedisiDao {
     @Query("UPDATE t_ekspedisi SET status=:status WHERE id = :id")
     fun updateStatusEkspedisi(status: Int, id: Int) : Completable
 
+    @Query("UPDATE t_ekspedisi SET tgl_diterima=:tgl, status=:status WHERE id = :id")
+    fun updateEkspedisiDiterima(tgl:String, status: Int, id: Int) : Completable
+
 
     //update menggunakan object
     @Update

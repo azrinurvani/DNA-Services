@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.ekspedisi.AprovalEkspedisiFragment"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:fillViewport="true"
+            android:layout_weight="1">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Detail Pengirim"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:text="Nama "
+                            android:textStyle="bold"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="No HP "
+                            android:textStyle="bold"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Tanggal"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Alamat"
+                            android:maxLines="3"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_nama_pengirim"
+                            tools:text="Azri Nurvani"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txt_phone_pengirim"
+                            tools:text="0823666161616"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/blue"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txt_tgl_pengiriman"
+                            tools:text="31 Mei 2021"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txt_alamat_pengirim"
+                            tools:text="Jln. H. Soebrantas, Tampan, Pekanbaru"
+                            android:maxLines="3"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:text="Detail Penerima"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:text="Nama "
+                            android:textStyle="bold"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="No HP "
+                            android:textStyle="bold"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Tanggal"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Alamat"
+                            android:maxLines="3"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_nama_penerima"
+                            tools:text="Azri Nurvani"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txt_phone_penerima"
+                            tools:text="0823666161616"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/blue"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txt_tgl_diterima"
+                            tools:text="31 Mei 2021"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txt_alamat_diterima"
+                            tools:text="Jln. H. Soebrantas, Tampan, Pekanbaru"
+                            android:maxLines="3"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:text="Detail Barang"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:text="Nama"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Jenis"
+                            android:textStyle="bold"
+                            android:maxLines="2"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Berat (KG)"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txt_title_stnk"
+                            android:text="STNK Asli"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Total Biaya ( Rp )"
+                            android:maxLines="2"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_merk_motor"
+                            tools:text="Yamaha Xabre"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txt_jenis_barang"
+                            android:maxLines="2"
+                            tools:text="150"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txt_berat"
+                            tools:text="135"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txt_stnk_asli_avail"
+                            tools:text="Ada"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txt_total_biaya"
+                            tools:text="1.800.000"
+                            android:maxLines="3"
+                            android:fontFamily="@font/open_sans"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <!--        Button-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="64dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_button_green"
+                android:gravity="center"
+                android:text="Terima Paket"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".view.ekspedisi.FormPengirimanMotorFragment"
+    tools:context=".view.ekspedisi.FormPengirimanBarangFragment"
     android:layout_marginTop="24dp"
     android:layout_marginRight="16dp"
     android:layout_marginLeft="16dp"
@@ -34,9 +34,9 @@
             <EditText
                 android:id="@+id/edt_nama_pengirim"
                 android:textAllCaps="false"
+                android:inputType="text"
                 android:hint="@string/hint_nama_pengirim"
                 android:layout_marginBottom="8dp"
-                android:inputType="text"
                 android:textSize="18sp"
                 android:backgroundTint="@color/dark_navy"
                 android:background="@drawable/bg_edittext"
@@ -48,8 +48,8 @@
             <EditText
                 android:id="@+id/edt_phone_pengirim"
                 android:textAllCaps="false"
-                android:hint="@string/phone_hint"
                 android:inputType="phone"
+                android:hint="@string/phone_hint"
                 android:layout_marginBottom="8dp"
                 android:textSize="18sp"
                 android:backgroundTint="@color/dark_navy"
@@ -105,8 +105,8 @@
             <EditText
                 android:id="@+id/edt_nama_penerima"
                 android:textAllCaps="false"
-                android:inputType="text"
                 android:hint="@string/hint_nama_penerima"
+                android:inputType="text"
                 android:layout_marginBottom="8dp"
                 android:textSize="18sp"
                 android:backgroundTint="@color/dark_navy"
@@ -120,8 +120,8 @@
                 android:id="@+id/edt_phone_penerima"
                 android:textAllCaps="false"
                 android:hint="@string/phone_hint"
-                android:inputType="phone"
                 android:layout_marginBottom="8dp"
+                android:inputType="phone"
                 android:textSize="18sp"
                 android:backgroundTint="@color/dark_navy"
                 android:background="@drawable/bg_edittext"
@@ -133,10 +133,10 @@
             <EditText
                 android:id="@+id/edt_alamat_penerima"
                 android:textAllCaps="false"
-                android:inputType="textMultiLine"
                 android:hint="@string/address_hint"
                 android:layout_marginBottom="8dp"
                 android:textSize="18sp"
+                android:inputType="textMultiLine"
                 android:backgroundTint="@color/dark_navy"
                 android:background="@drawable/bg_edittext"
                 android:paddingHorizontal="16dp"
@@ -144,18 +144,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-<!--            <EditText-->
-<!--                android:id="@+id/edt_tgl_diterima"-->
-<!--                android:textAllCaps="false"-->
-<!--                android:hint="31 Mei 2021"-->
-<!--                android:layout_marginBottom="8dp"-->
-<!--                android:textSize="18sp"-->
-<!--                android:backgroundTint="@color/dark_navy"-->
-<!--                android:background="@drawable/bg_edittext"-->
-<!--                android:paddingHorizontal="16dp"-->
-<!--                android:paddingVertical="10dp"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"/>-->
+            <!--            <EditText-->
+            <!--                android:id="@+id/edt_tgl_diterima"-->
+            <!--                android:textAllCaps="false"-->
+            <!--                android:hint="31 Mei 2021"-->
+            <!--                android:layout_marginBottom="8dp"-->
+            <!--                android:textSize="18sp"-->
+            <!--                android:backgroundTint="@color/dark_navy"-->
+            <!--                android:background="@drawable/bg_edittext"-->
+            <!--                android:paddingHorizontal="16dp"-->
+            <!--                android:paddingVertical="10dp"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"/>-->
 
 
             <View
@@ -163,7 +163,7 @@
                 android:layout_height="24dp"/>
 
             <TextView
-                android:text="Detail Motor"
+                android:text="Detail Barang"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:fontFamily="@font/open_sans_bold"
@@ -171,14 +171,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
-            <TextView
-                android:text="Kelas Motor (CC)"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:fontFamily="@font/open_sans"
-                android:layout_marginBottom="4dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
 
             <!--radio kelas motor-->
 
@@ -187,75 +179,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <RadioGroup
-                    android:id="@+id/rg_kelas_motor"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <RadioButton
-                        android:id="@+id/rb_kelas_1"
-                        android:text="0 - 125"
-                        android:fontFamily="@font/open_sans"
-                        android:layout_width="wrap_content"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
-
-
-                    <RadioButton
-                        android:id="@+id/rb_kelas_2"
-                        android:text="125 - 150"
-                        android:fontFamily="@font/open_sans"
-                        android:layout_width="wrap_content"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
-
-                    <RadioButton
-                        android:id="@+id/rb_kelas_3"
-                        android:text="150 - 250"
-                        android:layout_marginRight="16dp"
-                        android:fontFamily="@font/open_sans"
-                        android:layout_weight="1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-                    <RadioButton
-                        android:id="@+id/rb_kelas_4"
-                        android:text="250 - 300"
-                        android:fontFamily="@font/open_sans"
-                        android:layout_width="wrap_content"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
-
-
-                    <RadioButton
-                        android:id="@+id/rb_kelas_5"
-                        android:text="300 - 500"
-                        android:fontFamily="@font/open_sans"
-                        android:layout_width="wrap_content"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
-
-                    <RadioButton
-                        android:id="@+id/rb_kelas_6"
-                        android:text=" > 500"
-                        android:layout_marginRight="16dp"
-                        android:fontFamily="@font/open_sans"
-                        android:layout_weight="1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-                </RadioGroup>
 
             </LinearLayout>
 
 
 
             <TextView
-                android:text="Merk Motor"
+                android:text="Nama Barang"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:fontFamily="@font/open_sans"
@@ -264,10 +194,10 @@
                 android:layout_height="wrap_content"/>
 
             <EditText
-                android:id="@+id/edt_merk_motor"
+                android:id="@+id/edt_nama_barang"
                 android:textAllCaps="false"
                 android:inputType="text"
-                android:hint="@string/yamaha_xabre"
+                android:hint="Spare part motor Yamaha Beat"
                 android:layout_marginBottom="8dp"
                 android:textSize="18sp"
                 android:backgroundTint="@color/dark_navy"
@@ -318,48 +248,6 @@
 
             </LinearLayout>
 
-            <TextView
-                android:text="Apakah anda memiliki STNK Asli ?"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:fontFamily="@font/open_sans"
-                android:layout_marginBottom="4dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioGroup
-                    android:id="@+id/rg_stnk_avail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/rb_stnk_avail"
-                        android:text="Ya"
-                        android:fontFamily="@font/open_sans"
-                        android:layout_width="wrap_content"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
-
-                    <RadioButton
-                        android:id="@+id/rb_stnk_unavail"
-                        android:text="Tidak"
-                        android:fontFamily="@font/open_sans"
-                        android:layout_width="wrap_content"
-                        android:layout_marginRight="16dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
-
-                </RadioGroup>
-
-
-            </LinearLayout>
 
         </LinearLayout>
 

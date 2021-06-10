@@ -10,22 +10,18 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.findNavController
 import com.mobile.azrinurvani.dnaproject.BaseFragment
-import com.mobile.azrinurvani.dnaproject.R
-import com.mobile.azrinurvani.dnaproject.databinding.FragmentFormPengirimanMotorBinding
+
+import com.mobile.azrinurvani.dnaproject.databinding.FragmentFormPengirimanBarangBinding
 import com.mobile.azrinurvani.dnaproject.model.Ekspedisi
-import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
-import java.time.format.FormatStyle
 
 @SuppressLint("NewApi")
-class FormPengirimanMotorFragment : BaseFragment() {
+class FormPengirimanBarangFragment : BaseFragment() {
 
-    private lateinit var binding : FragmentFormPengirimanMotorBinding
+    private lateinit var binding : FragmentFormPengirimanBarangBinding
 
-    private var stnkAvail = false
-    private var kelasMotor = 1
-    private var biaya = 0.0
+    private var biaya = 80000.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,20 +32,17 @@ class FormPengirimanMotorFragment : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentFormPengirimanMotorBinding.inflate(inflater,container,false)
+        binding = FragmentFormPengirimanBarangBinding.inflate(inflater,container,false)
         return binding.root
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //val currentDate = LocalDate.now()
         val currentDateTime = LocalDateTime.now()
 
-       // val formatter = currentDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL, FormatStyle.MEDIUM))
         val formatter = currentDateTime.format(DateTimeFormatter.ofPattern("dd/MMMM/yyyy HH:mm:ss"))
-//        val formatter = currentDate.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)).toString()
-
         binding.edtTglPengiriman.setText(formatter.toString())
 
         binding.btnOrder.setOnClickListener {
@@ -58,13 +51,7 @@ class FormPengirimanMotorFragment : BaseFragment() {
 
     }
 
-
-    private fun setFormData() {
-        kelasMotor()
-        cekStnkAvail()
-
-
-        //pengirim
+    private fun setFormData(){
         val namaPengirim = binding.edtNamaPengirim.text.toString()
         val telpPengirim = binding.edtPhonePengirim.text.toString()
 
@@ -78,7 +65,7 @@ class FormPengirimanMotorFragment : BaseFragment() {
         val alamatDiterima = binding.edtAlamatPenerima.text.toString()
 
         //paket
-        val merkMotor = binding.edtMerkMotor.text.toString()
+        val namaBarang = binding.edtNamaBarang.text.toString()
         val berat = binding.edtBerat.text.toString().toDouble()
         var total = berat * biaya
 
@@ -90,14 +77,14 @@ class FormPengirimanMotorFragment : BaseFragment() {
 //            TextUtils.isEmpty(tglDiterima) ||
             TextUtils.isEmpty(alamatPengiriman) ||
             TextUtils.isEmpty(alamatDiterima) ||
-            TextUtils.isEmpty(merkMotor) ||
+            TextUtils.isEmpty(namaBarang) ||
             TextUtils.isEmpty(berat.toString())){
 
-            Toast.makeText(activity,"Mohon Lengkapi Form",Toast.LENGTH_LONG).show()
+            Toast.makeText(activity,"Mohon Lengkapi Form", Toast.LENGTH_LONG).show()
 
         }else{
             val data = Ekspedisi(
-                tipeBarang = kelasMotor,
+                tipeBarang = 0,
                 nama_pengirim = namaPengirim,
                 nama_penerima = namaPenerima,
                 telpPengirim = telpPengirim,
@@ -105,10 +92,10 @@ class FormPengirimanMotorFragment : BaseFragment() {
                 tglPengiriman = tglDikirim,
                 alamatPengirim = alamatPengiriman,
                 alamatPenerima = alamatDiterima,
-                namaBarang = merkMotor,
+                namaBarang = namaBarang,
                 biaya = biaya,
                 berat = berat,
-                stnkAvail = stnkAvail,
+                stnkAvail = false,
                 total = total,
                 status = 0)
 
@@ -117,53 +104,12 @@ class FormPengirimanMotorFragment : BaseFragment() {
         }
 
     }
-
     private fun moveToDetail(data: Ekspedisi){
-        val directions = FormPengirimanMotorFragmentDirections
-            .actionFormPengirimanMotorFragmentToDetailPengirimanMotorFragment(data)
+        val directions = FormPengirimanBarangFragmentDirections.actionFormPengirimanAksesorisFragmentToDetailPengirimanBarangFragment(data)
         view?.findNavController()?.navigate(directions)
     }
 
-
-
-    private fun kelasMotor(){
-        if (binding.rbKelas1.isChecked){
-            // 0 - 125
-            kelasMotor = 1
-            biaya = 10000.0
-        }else if (binding.rbKelas2.isChecked){
-            // 125 - 150
-            kelasMotor = 2
-            biaya = 12500.0
-        }else if (binding.rbKelas3.isChecked){
-            // 150 - 250
-            kelasMotor = 3
-            biaya = 14000.0
-        }else if (binding.rbKelas4.isChecked){
-            //250 - 300
-            kelasMotor = 4
-            biaya = 20000.0
-        }else if (binding.rbKelas5.isChecked){
-            //300 - 500
-            kelasMotor = 5
-            biaya = 25000.0
-        }else if (binding.rbKelas6.isChecked){
-            // > 500
-            kelasMotor = 6
-            biaya = 40000.0
-        }
-    }
-
-    private fun cekStnkAvail(){
-        if (binding.rbStnkAvail.isChecked)
-        {
-            stnkAvail = true
-        }else if (binding.rbStnkUnavail.isChecked){
-            stnkAvail = false
-        }
-    }
-
     companion object {
-        private const val TAG = "FormPengirimanMotorFrag"
+        private const val TAG = "FormPengirimanAksesoris"
     }
 }

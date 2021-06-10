@@ -33,7 +33,11 @@
         android:id="@+id/fragmentListEkspedisi"
         android:name="com.mobile.azrinurvani.dnaproject.view.ekspedisi.FragmentListDetailEkspedisi"
         android:label="Ekspedisi"
-        tools:layout="@layout/fragment_list_detail_ekspedisi" />
+        tools:layout="@layout/fragment_list_detail_ekspedisi" >
+        <action
+            android:id="@+id/action_fragmentListEkspedisi_to_aprovalEkspedisiFragment"
+            app:destination="@id/aprovalEkspedisiFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentListStnk"
         android:name="com.mobile.azrinurvani.dnaproject.view.stnk.FragmentListDetailStnk"
@@ -137,12 +141,15 @@
     </fragment>
     <fragment
         android:id="@+id/formPengirimanAksesorisFragment"
-        android:name="com.mobile.azrinurvani.dnaproject.view.ekspedisi.FormPengirimanAksesorisFragment"
+        android:name="com.mobile.azrinurvani.dnaproject.view.ekspedisi.FormPengirimanBarangFragment"
         android:label="Form Pengiriman Aksesoris atau Spare Part"
-        tools:layout="@layout/fragment_form_pengiriman_aksesoris">
+        tools:layout="@layout/fragment_form_pengiriman_barang">
         <action
             android:id="@+id/action_formPengirimanAksesorisFragment_to_fragmentHome"
             app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_formPengirimanAksesorisFragment_to_detailPengirimanBarangFragment"
+            app:destination="@id/detailPengirimanBarangFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailPengirimanMotorFragment"
@@ -157,6 +164,40 @@
 
         <action
             android:id="@+id/action_detailPengirimanMotorFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/aprovalEkspedisiFragment"
+        android:name="com.mobile.azrinurvani.dnaproject.view.ekspedisi.AprovalEkspedisiFragment"
+        android:label="Detail Ekspedisi"
+        tools:layout="@layout/fragment_aproval_ekspedisi">
+
+        <argument
+            android:name="data_detail_ekspedisi"
+            app:argType="com.mobile.azrinurvani.dnaproject.model.Ekspedisi"
+            />
+        <action
+            android:id="@+id/action_aprovalEkspedisiFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailPengirimanBarangFragment"
+        android:name="com.mobile.azrinurvani.dnaproject.view.ekspedisi.DetailPengirimanBarangFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail_pengiriman_barang" >
+
+        <argument
+            android:name="data_detail_ekspedisi"
+            app:argType="com.mobile.azrinurvani.dnaproject.model.Ekspedisi"
+            />
+
+
+        <action
+            android:id="@+id/action_detailPengirimanBarangFragment_to_formPengirimanAksesorisFragment"
+            app:destination="@id/formPengirimanAksesorisFragment" />
+        <action
+            android:id="@+id/action_detailPengirimanBarangFragment_to_fragmentHome"
             app:destination="@id/fragmentHome" />
     </fragment>
 </navigation>

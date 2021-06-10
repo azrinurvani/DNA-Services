@@ -40,7 +40,7 @@
                     android:layout_marginRight="16dp"/>
 
                 <TextView
-                    android:text="Pengiriman Aksesoris"
+                    android:text="Pengiriman Aksesoris/Sparepart Motor"
                     android:textSize="28sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/open_sans_bold"
@@ -104,7 +104,7 @@
                     android:layout_marginRight="16dp"/>
 
                 <TextView
-                    android:text="Pengiriman Motor"
+                    android:text="Pengiriman Kendaraan Motor"
                     android:textSize="28sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/open_sans_bold"

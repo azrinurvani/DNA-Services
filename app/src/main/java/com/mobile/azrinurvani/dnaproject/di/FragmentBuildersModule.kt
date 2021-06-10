@@ -47,10 +47,16 @@ abstract class FragmentBuildersModule {
     abstract fun contributeFragmentFormPengirimanMotor() : FormPengirimanMotorFragment
 
     @ContributesAndroidInjector
-    abstract fun contributeFragmentFormPengirimanAksesoris() : FormPengirimanAksesorisFragment
+    abstract fun contributeFragmentFormPengirimanAksesoris() : FormPengirimanBarangFragment
 
     @ContributesAndroidInjector
     abstract fun contributeFragmentDetailPengirimanMotor() : DetailPengirimanMotorFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributeFragmentDetailPengirimaBarang() : DetailPengirimanBarangFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributeFragmentAprovalEkspedisi() : AprovalEkspedisiFragment
 
 
 }

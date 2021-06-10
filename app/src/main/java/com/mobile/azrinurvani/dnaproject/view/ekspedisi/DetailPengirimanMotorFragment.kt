@@ -100,7 +100,7 @@ class DetailPengirimanMotorFragment : BaseFragment() {
             binding.txtPhonePengirim.text = telpPengirim
             binding.txtPhonePenerima.text = telpPenerima
             binding.txtTglPengiriman.text = tglPengiriman
-            binding.txtTglDiterima.text = tglDiterima
+//            binding.txtTglDiterima.text = tglDiterima
             binding.txtAlamatPengirim.text = alamatPengirim
             binding.txtAlamatDiterima.text = alamatPenerima
             binding.txtMerkMotor.text = namaBarang

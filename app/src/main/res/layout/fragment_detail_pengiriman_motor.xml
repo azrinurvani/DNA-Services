@@ -191,14 +191,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
-                    <TextView
-                        android:text="Tanggal"
-                        android:fontFamily="@font/open_sans"
-                        android:textColor="@color/black"
-                        android:layout_marginBottom="16dp"
-                        android:textSize="16sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+<!--                    <TextView-->
+<!--                        android:text="Tanggal"-->
+<!--                        android:fontFamily="@font/open_sans"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:layout_marginBottom="16dp"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"/>-->
 
                     <TextView
                         android:text="Alamat"
@@ -241,15 +241,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
-                    <TextView
-                        android:id="@+id/txt_tgl_diterima"
-                        tools:text="31 Mei 2021"
-                        android:fontFamily="@font/open_sans"
-                        android:textColor="@color/black"
-                        android:layout_marginBottom="16dp"
-                        android:textSize="16sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+<!--                    <TextView-->
+<!--                        android:id="@+id/txt_tgl_diterima"-->
+<!--                        tools:text="31 Mei 2021"-->
+<!--                        android:fontFamily="@font/open_sans"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:layout_marginBottom="16dp"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"/>-->
 
                     <TextView
                         android:id="@+id/txt_alamat_diterima"
