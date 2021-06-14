@@ -14,7 +14,7 @@
         android:layout_marginBottom="16dp"
         android:layout_margin="1dp"
         app:cardCornerRadius="10dp"
-        app:cardElevation="10dp"
+        app:cardElevation="4dp"
         android:padding="4dp">
 
         <LinearLayout
@@ -37,14 +37,14 @@
                     android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/text_detail_size_normal"
                     android:textColor="@color/black"/>
 
                 <TextView
                     android:text="No HP Pengirim"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_detail_size_normal"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/dark_gray"/>
 
@@ -52,7 +52,7 @@
                     android:text="Nama Penerima"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_detail_size_normal"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/dark_gray"/>
 
@@ -60,7 +60,7 @@
                     android:text="No HP Penerima"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_detail_size_normal"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/dark_gray"/>
 
@@ -68,9 +68,9 @@
                     android:text="Tanggal Pengiriman"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_detail_size_normal"
                     android:layout_marginTop="8dp"
-                    android:textColor="#636363"/>
+                    android:textColor="@color/dark_gray"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -78,24 +78,24 @@
                     android:layout_marginTop="8dp"
                     android:text="Nama Barang"
                     android:textColor="@color/dark_gray"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_detail_size_normal" />
 
-                <TextView
-                    android:text="Alamat asal"
-                    android:maxLines="4"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:textSize="16sp"
-                    android:layout_marginTop="8dp"
-                    android:textColor="@color/dark_gray"/>
+<!--                <TextView-->
+<!--                    android:text="Alamat asal"-->
+<!--                    android:maxLines="4"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="45dp"-->
+<!--                    android:textSize="@dimen/text_detail_size_normal"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:textColor="@color/dark_gray"/>-->
 
-                <TextView
-                    android:text="Alamat tujuan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:layout_marginTop="8dp"
-                    android:textColor="@color/dark_gray"/>
+<!--                <TextView-->
+<!--                    android:text="Alamat tujuan"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="45dp"-->
+<!--                    android:textSize="@dimen/text_detail_size_normal"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:textColor="@color/dark_gray"/>-->
 
 
             </LinearLayout>
@@ -113,7 +113,7 @@
                     android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
+                    android:textSize="14sp"
                     android:textColor="@color/black"/>
 
                 <LinearLayout
@@ -136,7 +136,7 @@
                     tools:text="08123123123"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/dark_gray"/>
 
@@ -145,7 +145,7 @@
                     tools:text="John Doe"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_detail_size_normal"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/dark_gray"/>
 
@@ -154,7 +154,7 @@
                     tools:text="08123123123"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_detail_size_normal"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/dark_gray"/>
 
@@ -163,9 +163,9 @@
                     tools:text="09/June/2021 10:42:03"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_detail_size_normal"
                     android:layout_marginTop="8dp"
-                    android:textColor="#636363"/>
+                    android:textColor="@color/dark_gray"/>
 
                 <TextView
                     android:id="@+id/txt_nama_barang"
@@ -174,35 +174,35 @@
                     android:layout_marginTop="8dp"
                     tools:text="Motor Yamaha Xabre"
                     android:textColor="@color/dark_gray"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/text_detail_size_normal" />
 
-                <TextView
-                    android:id="@+id/txt_asal_pengiriman"
-                    tools:text="Jln. Haji Soebrantas, Pekanbaru"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:textSize="16sp"
-                    android:layout_marginTop="8dp"
-                    android:textColor="@color/dark_gray"/>
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_asal_pengiriman"-->
+<!--                    tools:text="Jln. Haji Soebrantas, Pekanbaru"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:textSize="@dimen/text_detail_size_normal"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:textColor="@color/dark_gray"/>-->
 
 
-                <TextView
-                    android:id="@+id/txt_tujuan_pengiriman"
-                    tools:text="Jln. Haji Soebrantas, Pekanbaru"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:layout_marginTop="8dp"
-                    android:textColor="@color/dark_gray"/>
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_tujuan_pengiriman"-->
+<!--                    tools:text="Jln. Haji Soebrantas, Pekanbaru"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:textSize="@dimen/text_detail_size_normal"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:textColor="@color/dark_gray"/>-->
 
                 <TextView
                     android:id="@+id/txt_jenis_barang"
-                    tools:text="Pengiriman Motor"
+                    tools:text="Pengiriman Motor kelas 125 - 150 cc"
                     android:gravity="end"
                     android:textStyle="bold|italic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/text_detail_size_normal"
                     android:layout_marginTop="16dp"
                     android:layout_marginHorizontal="16dp"
                     android:textColor="@color/green"/>
@@ -215,8 +215,8 @@
                     android:textStyle="bold|italic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="14sp"
-                    android:layout_marginTop="8dp"
+                    android:textSize="@dimen/text_detail_size_normal"
+                    android:layout_marginTop="4dp"
                     android:textColor="@color/red"/>
             </LinearLayout>
         </LinearLayout>

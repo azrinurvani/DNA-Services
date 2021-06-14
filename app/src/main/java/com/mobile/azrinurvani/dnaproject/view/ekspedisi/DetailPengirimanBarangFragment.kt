@@ -77,6 +77,7 @@ class DetailPengirimanBarangFragment : BaseFragment() {
             val alamatPenerima = dataEkspedisi.alamatPenerima
 
             val namaBarang = dataEkspedisi.namaBarang
+            val descBarang = dataEkspedisi.descBarang
             val berat = dataEkspedisi.berat
             val total = dataEkspedisi.total
 
@@ -90,6 +91,7 @@ class DetailPengirimanBarangFragment : BaseFragment() {
             binding.txtAlamatPengirim.text = alamatPengirim
             binding.txtAlamatDiterima.text = alamatPenerima
             binding.txtNamaBarang.text = namaBarang
+            binding.txtDeskripsi.text = descBarang
             binding.txtBerat.text = berat.toString()
             binding.txtTotalBiaya.text = total.toString()
         }else{

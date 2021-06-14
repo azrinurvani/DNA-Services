@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/centre_background"
+    android:padding="8dp"
     tools:context=".view.ekspedisi.FragmentListDetailEkspedisi">
 
-    <!-- TODO: Update blank fragment layout -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_ekspedisi"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="64dp"
         tools:listitem="@layout/layout_list_ekspedisi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

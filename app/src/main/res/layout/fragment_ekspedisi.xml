@@ -8,16 +8,17 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     android:gravity="center"
-    android:background="@color/grey_light"
-    android:layout_margin="16dp">
+    android:background="@drawable/centre_background">
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_pengiriman_aksesoris"
         android:layout_width="match_parent"
         android:layout_gravity="center"
-        app:cardElevation="10dp"
+        app:cardElevation="4dp"
         app:cardCornerRadius="10dp"
+        android:layout_marginHorizontal="8dp"
+        android:padding="16dp"
         android:layout_height="wrap_content">
 
         <LinearLayout
@@ -40,8 +41,8 @@
                     android:layout_marginRight="16dp"/>
 
                 <TextView
-                    android:text="Pengiriman Aksesoris/Sparepart Motor"
-                    android:textSize="28sp"
+                    android:text="Ekspedisi Aksesoris/Sparepart Motor"
+                    android:textSize="24sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/open_sans_bold"
                     android:layout_width="match_parent"
@@ -81,7 +82,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:cardElevation="10dp"
+        android:padding="16dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="4dp"
         app:cardCornerRadius="10dp">
 
         <LinearLayout
@@ -104,8 +108,8 @@
                     android:layout_marginRight="16dp"/>
 
                 <TextView
-                    android:text="Pengiriman Kendaraan Motor"
-                    android:textSize="28sp"
+                    android:text="Ekspedisi Motor"
+                    android:textSize="24sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/open_sans_bold"
                     android:layout_width="match_parent"

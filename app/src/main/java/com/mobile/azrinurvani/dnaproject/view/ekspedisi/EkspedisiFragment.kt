@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.mobile.azrinurvani.dnaproject.BaseFragment
 import com.mobile.azrinurvani.dnaproject.databinding.FragmentEkspedisiBinding
-import com.mobile.azrinurvani.dnaproject.view.home.FragmentHomeDirections
 
 
 class EkspedisiFragment : BaseFragment() {

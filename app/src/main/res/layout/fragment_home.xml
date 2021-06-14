@@ -5,25 +5,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:padding="10dp"
     android:background="@color/grey_light">
+
 <LinearLayout
-    android:layout_marginTop="32dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_marginBottom="32dp"
     android:orientation="vertical">
+
+    <LinearLayout
+        android:padding="16dp"
+        android:background="@drawable/bg_header"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="250dp">
+
+        <TextView
+            android:text="DNA MOTOR"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Aplikasi pelayanan perpanjangan dan penerbitan STNK serta ekspedisi pengiriman MOTOR ataupun sparepart Anda"
+            android:layout_marginHorizontal="16sp"
+            android:fontFamily="@font/open_sans"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:clipToPadding="false"
         android:gravity="center"
+        android:layout_marginTop="-90dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+<!--        card STNK Tahunan-->
         <androidx.cardview.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:id="@+id/card_pajak_tahunan"
+            app:cardCornerRadius="10dp"
+            android:elevation="10dp"
             android:layout_width="160dp"
             android:layout_height="200dp"
             android:layout_margin="10dp">
@@ -59,10 +96,14 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+<!--        card STNK 5 Tahunan-->
         <androidx.cardview.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:id="@+id/card_pajak_5_tahunan"
+            app:cardCornerRadius="10dp"
+            android:elevation="10dp"
             android:layout_width="160dp"
             android:layout_height="200dp"
             android:layout_margin="10dp">
@@ -100,16 +141,21 @@
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
+
     <LinearLayout
         android:clipToPadding="false"
         android:gravity="center"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+<!--        Card STNK Hilang-->
         <androidx.cardview.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:id="@+id/card_stnk_hilang"
+            app:cardCornerRadius="10dp"
+            android:elevation="10dp"
             android:layout_width="160dp"
             android:layout_height="200dp"
             android:layout_margin="10dp">
@@ -150,6 +196,8 @@
             android:clickable="true"
             android:id="@+id/card_mutasi"
             android:layout_width="160dp"
+            app:cardCornerRadius="10dp"
+            android:elevation="10dp"
             android:layout_height="200dp"
             android:layout_margin="10dp">
 
@@ -202,6 +250,8 @@
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:id="@+id/card_balik_nama"
+            app:cardCornerRadius="10dp"
+            android:elevation="10dp"
             android:layout_width="160dp"
             android:layout_height="200dp"
             android:layout_margin="10dp">
@@ -237,10 +287,13 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:id="@+id/card_ekspedisi"
+            app:cardCornerRadius="10dp"
+            android:elevation="10dp"
             android:layout_width="160dp"
             android:layout_height="200dp"
             android:layout_margin="10dp">

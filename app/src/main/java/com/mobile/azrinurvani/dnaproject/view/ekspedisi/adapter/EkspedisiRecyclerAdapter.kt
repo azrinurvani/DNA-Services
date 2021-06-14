@@ -56,8 +56,8 @@ class EkspedisiRecyclerAdapter : RecyclerView.Adapter<EkspedisiRecyclerAdapter.E
             binding.txtNamaPenerima.text = data?.nama_penerima
             binding.txtNamaBarang.text = data?.namaBarang
             binding.txtTglPengiriman.text = data?.tglPengiriman
-            binding.txtTujuanPengiriman.text = data?.alamatPenerima
-            binding.txtAsalPengiriman.text = data?.alamatPengirim
+//            binding.txtTujuanPengiriman.text = data?.alamatPenerima
+//            binding.txtAsalPengiriman.text = data?.alamatPengirim
             binding.txtNoHpPengirim.text = data?.telpPengirim
             binding.txtNoHpPenerima.text = data?.telpPenerima
 

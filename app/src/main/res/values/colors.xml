@@ -12,7 +12,7 @@
     <color name="grey">#C3C2C2</color>
     <color name="grey_light">#DFDFDF</color>
     <color name="dark_navy">#003049</color>
-    <color name="blue_light">#00c6f3</color>
+<!--    <color name="blue_light">#00c6f3</color>-->
     <color name="blue">#0A26B3</color>
     <color name="green_light">#00BE7E</color>
     <color name="green">#098A5F</color>
@@ -20,4 +20,8 @@
     <color name="orange">#D55F04</color>
     <color name="pink">#f1004e</color>
     <color name="red">#B30808</color>
+
+    <color name="blue_light">#0D93C1</color>
+    <color name="blue_tosca">#0EAFAD</color>
+    <color name="blue_dark">#0C78D5</color>
 </resources>

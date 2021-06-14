@@ -13,10 +13,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.mobile.azrinurvani.dnaproject.BaseFragment
-import com.mobile.azrinurvani.dnaproject.R
 import com.mobile.azrinurvani.dnaproject.databinding.FragmentAprovalEkspedisiBinding
-import com.mobile.azrinurvani.dnaproject.model.Ekspedisi
-import com.mobile.azrinurvani.dnaproject.view.stnk.AprovalStnkFragmentDirections
 import com.mobile.azrinurvani.dnaproject.viewmodel.ViewModelProviderFactory
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -78,6 +75,8 @@ class AprovalEkspedisiFragment : BaseFragment() {
 
             if (dataEkspedisi.stnkAvail == true){
                 binding.txtStnkAsliAvail.text = "Ada"
+                binding.txtTitleStnk.visibility = View.VISIBLE
+                binding.txtStnkAsliAvail.visibility = View.VISIBLE
             }else if (dataEkspedisi.stnkAvail == false){
                 binding.txtTitleStnk.visibility = View.GONE
                 binding.txtStnkAsliAvail.visibility = View.GONE
@@ -120,7 +119,7 @@ class AprovalEkspedisiFragment : BaseFragment() {
         val tglDiterima = currentDateTime.format(DateTimeFormatter.ofPattern("dd/MMMM/yyyy HH:mm:ss"))
         binding.btnSubmit.setOnClickListener {
             viewModel.updateStatusDiterima(tglDiterima,2,id_ekspedisi)
-            Toast.makeText(activity,"Approve Success", Toast.LENGTH_LONG).show()
+            Toast.makeText(activity,"Paket diterima", Toast.LENGTH_LONG).show()
             moveToHome()
         }
     }
@@ -130,14 +129,14 @@ class AprovalEkspedisiFragment : BaseFragment() {
     private fun moveToCallByPhone(){
 
         binding.txtPhonePengirim.setOnClickListener {
-            val phoneNumber = binding.txtPhonePengirim.text.toString().split(":")[1]
+            val phoneNumber = binding.txtPhonePengirim.text.toString()
             val intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel:$phoneNumber")
             startActivity(intent)
         }
 
         binding.txtPhonePenerima.setOnClickListener {
-            val phoneNumber = binding.txtPhonePenerima.text.toString().split(":")[1]
+            val phoneNumber = binding.txtPhonePenerima.text.toString()
             val intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel:$phoneNumber")
             startActivity(intent)

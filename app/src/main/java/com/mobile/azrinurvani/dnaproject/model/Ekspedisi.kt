@@ -52,6 +52,9 @@ class Ekspedisi(
         @ColumnInfo(name = "nama_barang")
         var namaBarang:String? = null,
 
+        @ColumnInfo(name = "desc_barang")
+        var descBarang:String? = null,
+
         @ColumnInfo(name = "berat")
         var berat:Double? = null,
 

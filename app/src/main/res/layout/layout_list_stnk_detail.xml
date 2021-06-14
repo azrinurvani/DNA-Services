@@ -31,7 +31,7 @@
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"/>
 
             <LinearLayout
@@ -54,7 +54,7 @@
                 tools:text="13010102939"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="@dimen/text_detail_size_normal"
                 android:layout_marginTop="8dp"
                 android:textColor="@color/dark_gray"/>
             <TextView
@@ -62,9 +62,9 @@
                 tools:text="BA 1234 TXA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="@dimen/text_detail_size_normal"
                 android:layout_marginTop="8dp"
-                android:textColor="#636363"/>
+                android:textColor="@color/dark_gray"/>
 
             <TextView
                 android:id="@+id/txt_phone"
@@ -73,14 +73,14 @@
                 android:layout_marginTop="8dp"
                 tools:text="0812121212"
                 android:textColor="@color/dark_gray"
-                android:textSize="16sp" />
+                android:textSize="@dimen/text_detail_size_normal" />
 
             <TextView
                 android:id="@+id/txt_address"
                 tools:text="Jln. Haji Soebrantas, Pekanbaru"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="@dimen/text_detail_size_normal"
                 android:layout_marginTop="8dp"
                 android:textColor="@color/dark_gray"/>
 
@@ -91,7 +91,7 @@
                 android:textStyle="bold|italic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
+                android:textSize="@dimen/text_detail_size_normal"
                 android:layout_marginTop="16dp"
                 android:layout_marginHorizontal="16dp"
                 android:textColor="@color/green"/>
@@ -104,8 +104,8 @@
                 android:textStyle="bold|italic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"
+                android:textSize="@dimen/text_detail_size_normal"
+                android:layout_marginTop="4dp"
                 android:textColor="@color/red"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

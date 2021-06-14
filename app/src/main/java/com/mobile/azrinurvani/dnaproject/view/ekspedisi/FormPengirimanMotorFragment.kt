@@ -3,20 +3,16 @@ package com.mobile.azrinurvani.dnaproject.view.ekspedisi
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.TextUtils
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.findNavController
 import com.mobile.azrinurvani.dnaproject.BaseFragment
-import com.mobile.azrinurvani.dnaproject.R
 import com.mobile.azrinurvani.dnaproject.databinding.FragmentFormPengirimanMotorBinding
 import com.mobile.azrinurvani.dnaproject.model.Ekspedisi
-import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
-import java.time.format.FormatStyle
 
 @SuppressLint("NewApi")
 class FormPengirimanMotorFragment : BaseFragment() {
@@ -53,7 +49,12 @@ class FormPengirimanMotorFragment : BaseFragment() {
         binding.edtTglPengiriman.setText(formatter.toString())
 
         binding.btnOrder.setOnClickListener {
-            setFormData()
+            if(checkValidityForm()){
+                setFormData()
+            }else{
+                Toast.makeText(activity,"Mohon Lengkapi Form",Toast.LENGTH_LONG).show()
+            }
+
         }
 
     }
@@ -79,6 +80,7 @@ class FormPengirimanMotorFragment : BaseFragment() {
 
         //paket
         val merkMotor = binding.edtMerkMotor.text.toString()
+        val descMotor = binding.edtDescBarang.text.toString()
         val berat = binding.edtBerat.text.toString().toDouble()
         var total = berat * biaya
 
@@ -91,6 +93,7 @@ class FormPengirimanMotorFragment : BaseFragment() {
             TextUtils.isEmpty(alamatPengiriman) ||
             TextUtils.isEmpty(alamatDiterima) ||
             TextUtils.isEmpty(merkMotor) ||
+            TextUtils.isEmpty(descMotor) ||
             TextUtils.isEmpty(berat.toString())){
 
             Toast.makeText(activity,"Mohon Lengkapi Form",Toast.LENGTH_LONG).show()
@@ -109,12 +112,36 @@ class FormPengirimanMotorFragment : BaseFragment() {
                 biaya = biaya,
                 berat = berat,
                 stnkAvail = stnkAvail,
+                descBarang = descMotor,
                 total = total,
                 status = 0)
 
             moveToDetail(data)
 
         }
+
+    }
+
+    private fun checkValidityForm(): Boolean{
+        val namaPengirim =  binding.edtNamaPengirim.text.toString()
+        val namaPenerima =  binding.edtNamaPenerima.text.toString()
+        val telpPengirim =  binding.edtPhonePengirim.text.toString()
+        val telpPenerima =  binding.edtPhonePenerima.text.toString()
+        val tglPengiriman =  binding.edtTglPengiriman.text.toString()
+        val alamatPengirim =  binding.edtAlamatPengirim.text.toString()
+        val alamatDiterima = binding.edtAlamatPenerima.text.toString()
+        val merkMotor = binding.edtMerkMotor.text.toString()
+        val berat = binding.edtBerat.text.toString()
+
+        return !(TextUtils.isEmpty(namaPengirim)||
+                TextUtils.isEmpty(namaPenerima)||
+                TextUtils.isEmpty(telpPengirim)||
+                TextUtils.isEmpty(telpPenerima)||
+                TextUtils.isEmpty(tglPengiriman)||
+                TextUtils.isEmpty(alamatPengirim)||
+                TextUtils.isEmpty(alamatDiterima)||
+                TextUtils.isEmpty(merkMotor)||
+                TextUtils.isEmpty(berat))
 
     }
 

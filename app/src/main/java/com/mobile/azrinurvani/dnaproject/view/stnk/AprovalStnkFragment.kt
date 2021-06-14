@@ -3,7 +3,6 @@ package com.mobile.azrinurvani.dnaproject.view.stnk
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,6 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.mobile.azrinurvani.dnaproject.BaseFragment
-import com.mobile.azrinurvani.dnaproject.R
 import com.mobile.azrinurvani.dnaproject.databinding.FragmentAprovalStnkBinding
 import com.mobile.azrinurvani.dnaproject.viewmodel.ViewModelProviderFactory
 import javax.inject.Inject
