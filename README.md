@@ -9,6 +9,17 @@
 5. RxJava2
 
 # DEV-LOG
+Ver.0.1.3 
+- Add halaman Perkiraan Harga Ekspedisi
+- Delete Edit Text Berat pada Form Pengiriman Motor
+- Fix halaman FragmentHelp
+- Update Module
+- Update Navigation Graph
+- Improve AprovalEkspedisiFragment.kt 
+- Improve DetailPengirimanMotorFragment.kt
+- Improve STNK Detail Recycler 
+- Improve UI List STNK dan List Ekspedisi
+
 Ver.0.1.2 
 - Improve UI Form STNK Tahunan
 - Improve UI Form STNK 5 Tahunan
