@@ -9,6 +9,25 @@
 5. RxJava2
 
 # DEV-LOG
+Ver.0.1.2 
+- Improve UI Form STNK Tahunan
+- Improve UI Form STNK 5 Tahunan
+- Improve UI Form STNK Hilang
+- Improve UI Form Balik Nama
+- Improve UI Form Mutasi
+- Improve UI Form Ekspedisi (Motor dan Aksesoris/Sparepart)
+- Improve UI Dashboard
+- Improve UI Detail Pengiriman Motor
+- Improve UI Detail Pengiriman Barang (Aksesoris/Sparepart)
+- Improve UI Approval STNK
+- Improve UI Approval Ekspedisi
+- Improve DTO Ekspedisi (Add field desc_barang)
+- Improve EkspedisiRecyclerAdapter.kt
+- Improve UI halaman bantuan
+- Improve UI List Pengajuan STNK 
+- Improve UI List Ekspedisi STNK 
+- Add drawable resources
+
 Ver.0.1.0 - Part 2
 - Update AppComponent
 
