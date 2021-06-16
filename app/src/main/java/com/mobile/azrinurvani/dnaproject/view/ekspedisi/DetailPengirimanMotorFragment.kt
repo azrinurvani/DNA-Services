@@ -73,7 +73,7 @@ class DetailPengirimanMotorFragment : BaseFragment() {
 
             val namaBarang  = dataEkspedisi.namaBarang
             val desc  = dataEkspedisi.descBarang
-            val berat = dataEkspedisi.berat
+            //val berat = dataEkspedisi.berat
             val total = dataEkspedisi.total
 
             if (dataEkspedisi.stnkAvail == true){
@@ -106,7 +106,7 @@ class DetailPengirimanMotorFragment : BaseFragment() {
             binding.txtAlamatDiterima.text = alamatPenerima
             binding.txtMerkMotor.text = namaBarang
             binding.txtDeskripsi.text = desc
-            binding.txtBerat.text = berat.toString()
+           // binding.txtBerat.text = berat.toString()
             binding.txtTotalBiaya.text = total.toString()
 
         }

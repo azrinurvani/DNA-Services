@@ -82,6 +82,14 @@ class AprovalEkspedisiFragment : BaseFragment() {
                 binding.txtStnkAsliAvail.visibility = View.GONE
             }
 
+            if (dataEkspedisi.berat==null){
+                binding.txtTitleBerat.visibility = View.GONE
+                binding.txtBerat.visibility = View.GONE
+            }else{
+                binding.txtTitleBerat.visibility = View.VISIBLE
+                binding.txtBerat.visibility = View.VISIBLE
+            }
+
             if(dataEkspedisi.tipeBarang==0){
                 binding.txtJenisBarang.text = "Akesoris/Sparepart"
             } else if (dataEkspedisi.tipeBarang==1){

@@ -44,4 +44,9 @@
     <string name="yamaha_xabre">Yamaha Xabre</string>
     <string name="hint_nama_penerima">Nama Penerima</string>
     <string name="help_description">Kami disini untuk membantu Anda menggunakan aplikasi DNA Motor dengan lebih baik. Kami aktif setiap Senin - Jumat, pukul 09.30 - 17.30</string>
+    <string name="desc_ekspedisi_motor">Kami siap mengirimkan motor anda hingga sampai tujuan dengan aman, nyaman dengan harga terjangkau</string>
+    <string name="title_ekspedisi_motor">Ekspedisi Motor</string>
+    <string name="title_ekspedisi_aksesoris_sparepart">Ekspedisi Aksesoris/Sparepart Motor</string>
+    <string name="lanjutkan">Lanjutkan</string>
+    <string name="desc_ekspedisi">Selamat datang di jasa ekspedisi kami, disini kami melayani pengiriman motor beserta sparepart/aksesrosis motor Anda, silahkan cek perkiraan harga dari kami, dan lajutkan untuk pemesanan</string>
 </resources>

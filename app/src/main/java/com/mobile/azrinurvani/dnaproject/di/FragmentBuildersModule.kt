@@ -58,5 +58,8 @@ abstract class FragmentBuildersModule {
     @ContributesAndroidInjector
     abstract fun contributeFragmentAprovalEkspedisi() : AprovalEkspedisiFragment
 
+    @ContributesAndroidInjector
+    abstract fun contributeFragmentPerkiraanHargaEkspedisi() : PerkiraanHargaEkspedisiFragment
+
 
 }

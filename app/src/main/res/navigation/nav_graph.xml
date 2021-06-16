@@ -26,8 +26,9 @@
             android:id="@+id/action_fragmentHome_to_formMutasiFragment"
             app:destination="@id/formMutasiFragment" />
         <action
-            android:id="@+id/action_fragmentHome_to_ekspedisiFragment"
-            app:destination="@id/ekspedisiFragment" />
+            android:id="@+id/action_fragmentHome_to_perkiraanHargaEkspedisiFragment"
+            app:destination="@id/perkiraanHargaEkspedisiFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/fragmentListEkspedisi"
@@ -199,5 +200,14 @@
         <action
             android:id="@+id/action_detailPengirimanBarangFragment_to_fragmentHome"
             app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/perkiraanHargaEkspedisiFragment"
+        android:name="com.mobile.azrinurvani.dnaproject.view.ekspedisi.PerkiraanHargaEkspedisiFragment"
+        android:label="Ekspedisi "
+        tools:layout="@layout/fragment_perkiraan_harga_ekspedisi" >
+        <action
+            android:id="@+id/action_perkiraanHargaEkspedisiFragment_to_ekspedisiFragment"
+            app:destination="@id/ekspedisiFragment" />
     </fragment>
 </navigation>

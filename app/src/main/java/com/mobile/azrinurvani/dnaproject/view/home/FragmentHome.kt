@@ -4,11 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import com.mobile.azrinurvani.dnaproject.BaseFragment
-import com.mobile.azrinurvani.dnaproject.R
 import com.mobile.azrinurvani.dnaproject.databinding.FragmentHomeBinding
 import com.mobile.azrinurvani.dnaproject.viewmodel.ViewModelProviderFactory
 import javax.inject.Inject
@@ -44,7 +42,7 @@ class FragmentHome : BaseFragment() {
         moveToFragmentStnkHilang()
         moveToFragmentBalikNama()
         moveToFragmentMutasi()
-        moteToFragmentEkspedisi()
+        moveToEkspedisi()
 
     }
 
@@ -83,9 +81,9 @@ class FragmentHome : BaseFragment() {
         }
     }
 
-    private fun moteToFragmentEkspedisi(){
+    private fun moveToEkspedisi(){
         binding.cardEkspedisi.setOnClickListener {
-            val directions= FragmentHomeDirections.actionFragmentHomeToEkspedisiFragment()
+            val directions= FragmentHomeDirections.actionFragmentHomeToPerkiraanHargaEkspedisiFragment()
             it.findNavController().navigate(directions)
         }
     }

@@ -8,9 +8,15 @@ import com.mobile.azrinurvani.dnaproject.databinding.LayoutListStnkDetailBinding
 import com.mobile.azrinurvani.dnaproject.model.BiroJasa
 import com.mobile.azrinurvani.dnaproject.view.stnk.FragmentListDetailStnkDirections
 
-class StnkDetailRecyclerAdapter : RecyclerView.Adapter<StnkDetailRecyclerAdapter.StnkDetailViewHolder>() {
+class StnkDetailRecyclerAdapter : RecyclerView.Adapter<StnkDetailRecyclerAdapter.StnkDetailViewHolder>()/*, Filterable*/ {
     private lateinit var bindingLayout : LayoutListStnkDetailBinding
     var listBiroJasa = ArrayList<BiroJasa>()
+
+//    var filterData = ArrayList<BiroJasa>()
+
+//    init {
+//        filterData = ArrayList(listBiroJasa)
+//    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StnkDetailViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -83,4 +89,38 @@ class StnkDetailRecyclerAdapter : RecyclerView.Adapter<StnkDetailRecyclerAdapter
         }
 
     }
+
+    fun filterList(filteredList: ArrayList<BiroJasa>) {
+        listBiroJasa = filteredList
+        notifyDataSetChanged()
+    }
+
+//    override fun getFilter(): Filter {
+//        return stnkFilter
+//    }
+//    private val stnkFilter: Filter = object : Filter() {
+//        override fun performFiltering(constraint: CharSequence): FilterResults {
+//            val filter: MutableList<BiroJasa> = java.util.ArrayList<BiroJasa>()
+//            if (constraint == null || constraint.length == 0) {
+//                Collections.sort(filterData, Comparator { o1, o2 -> o2.name?.toLowerCase()?.let { o1.name?.toLowerCase()?.compareTo(it) }!! })
+//                filter.addAll(filterData)
+//            } else {
+//                val filteredPattern = constraint.toString().toLowerCase().trim { it <= ' ' }
+//                for (data in filterData) {
+//                    if (data.name?.toLowerCase()?.contains(filteredPattern)!!) {
+//                        filter.add(data)
+//                    }
+//                }
+//            }
+//            val result = FilterResults()
+//            result.values = filter
+//            return result
+//        }
+//
+//        override fun publishResults(constraint: CharSequence, results: FilterResults) {
+//            listBiroJasa.clear()
+//            listBiroJasa.addAll(results.values as List<BiroJasa>)
+//            notifyDataSetChanged()
+//        }
+//    }
 }

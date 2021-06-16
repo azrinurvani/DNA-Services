@@ -6,12 +6,17 @@
     android:layout_height="match_parent"
     android:padding="8dp"
     android:background="@drawable/centre_background"
-    tools:context=".view.stnk.FragmentListDetailStnk">
+    tools:context=".view.stnk.FragmentListDetailStnk"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
+<!--    <androidx.appcompat.widget.AppCompatEditText-->
+<!--        android:id="@+id/edt_filter_stnk"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_detail_stnk"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="64dp"
         tools:listitem="@layout/layout_list_stnk_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

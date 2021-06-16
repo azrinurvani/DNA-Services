@@ -41,7 +41,7 @@
                     android:layout_marginRight="16dp"/>
 
                 <TextView
-                    android:text="Ekspedisi Aksesoris/Sparepart Motor"
+                    android:text="@string/title_ekspedisi_aksesoris_sparepart"
                     android:textSize="24sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/open_sans_bold"
@@ -108,7 +108,7 @@
                     android:layout_marginRight="16dp"/>
 
                 <TextView
-                    android:text="Ekspedisi Motor"
+                    android:text="@string/title_ekspedisi_motor"
                     android:textSize="24sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/open_sans_bold"
@@ -125,7 +125,7 @@
 
 
                 <TextView
-                    android:text="Kami siap mengirimkan motor anda hingga sampai tujuan dengan aman, nyaman dan terjangkau"
+                    android:text="@string/desc_ekspedisi_motor"
                     android:textSize="20sp"
                     android:lines="4"
                     android:textColor="@color/black"

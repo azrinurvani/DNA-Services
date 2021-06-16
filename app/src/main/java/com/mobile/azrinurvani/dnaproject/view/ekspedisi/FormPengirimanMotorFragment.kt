@@ -81,8 +81,8 @@ class FormPengirimanMotorFragment : BaseFragment() {
         //paket
         val merkMotor = binding.edtMerkMotor.text.toString()
         val descMotor = binding.edtDescBarang.text.toString()
-        val berat = binding.edtBerat.text.toString().toDouble()
-        var total = berat * biaya
+        //val berat = binding.edtBerat.text.toString().toDouble()
+        var total = /*berat **/ biaya
 
         if (TextUtils.isEmpty(namaPengirim) ||
             TextUtils.isEmpty(namaPenerima) ||
@@ -93,8 +93,7 @@ class FormPengirimanMotorFragment : BaseFragment() {
             TextUtils.isEmpty(alamatPengiriman) ||
             TextUtils.isEmpty(alamatDiterima) ||
             TextUtils.isEmpty(merkMotor) ||
-            TextUtils.isEmpty(descMotor) ||
-            TextUtils.isEmpty(berat.toString())){
+            TextUtils.isEmpty(descMotor)){
 
             Toast.makeText(activity,"Mohon Lengkapi Form",Toast.LENGTH_LONG).show()
 
@@ -110,7 +109,6 @@ class FormPengirimanMotorFragment : BaseFragment() {
                 alamatPenerima = alamatDiterima,
                 namaBarang = merkMotor,
                 biaya = biaya,
-                berat = berat,
                 stnkAvail = stnkAvail,
                 descBarang = descMotor,
                 total = total,
@@ -131,7 +129,7 @@ class FormPengirimanMotorFragment : BaseFragment() {
         val alamatPengirim =  binding.edtAlamatPengirim.text.toString()
         val alamatDiterima = binding.edtAlamatPenerima.text.toString()
         val merkMotor = binding.edtMerkMotor.text.toString()
-        val berat = binding.edtBerat.text.toString()
+       // val berat = binding.edtBerat.text.toString()
 
         return !(TextUtils.isEmpty(namaPengirim)||
                 TextUtils.isEmpty(namaPenerima)||
@@ -140,8 +138,7 @@ class FormPengirimanMotorFragment : BaseFragment() {
                 TextUtils.isEmpty(tglPengiriman)||
                 TextUtils.isEmpty(alamatPengirim)||
                 TextUtils.isEmpty(alamatDiterima)||
-                TextUtils.isEmpty(merkMotor)||
-                TextUtils.isEmpty(berat))
+                TextUtils.isEmpty(merkMotor))
 
     }
 
@@ -157,27 +154,27 @@ class FormPengirimanMotorFragment : BaseFragment() {
         if (binding.rbKelas1.isChecked){
             // 0 - 125
             kelasMotor = 1
-            biaya = 10000.0
+            biaya = 500000.0
         }else if (binding.rbKelas2.isChecked){
             // 125 - 150
             kelasMotor = 2
-            biaya = 12500.0
+            biaya = 800000.0
         }else if (binding.rbKelas3.isChecked){
             // 150 - 250
             kelasMotor = 3
-            biaya = 14000.0
+            biaya = 1500000.0
         }else if (binding.rbKelas4.isChecked){
             //250 - 300
             kelasMotor = 4
-            biaya = 20000.0
+            biaya = 2000000.0
         }else if (binding.rbKelas5.isChecked){
             //300 - 500
             kelasMotor = 5
-            biaya = 25000.0
+            biaya = 2500000.0
         }else if (binding.rbKelas6.isChecked){
             // > 500
             kelasMotor = 6
-            biaya = 40000.0
+            biaya = 5000000.0
         }
     }
 
